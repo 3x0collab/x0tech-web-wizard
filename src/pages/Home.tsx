@@ -153,27 +153,71 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Join hundreds of African businesses already using our smart software solutions to grow and succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <NavLink to="/contact">
-              <Button variant="secondary" size="xl" className="group">
-                Contact Us Today
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </NavLink>
-            <NavLink to="/about">
-              <Button variant="outline" size="xl" className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Learn About Us
-              </Button>
-            </NavLink>
+      {/* Premium CTA Section */}
+      <section className="relative py-24 bg-primary overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-accent rounded-full blur-xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-accent rounded-full blur-lg"></div>
+          <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-accent rounded-full blur-lg"></div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Icon */}
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/20 rounded-full mb-6">
+              <Zap className="w-8 h-8 text-accent" />
+            </div>
+            
+            {/* Heading */}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+              Ready to take your business to the{' '}
+              <span className="text-accent">next level?</span>
+            </h2>
+            
+            {/* Subheading */}
+            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Join hundreds of African businesses already transforming their operations with our intelligent software solutions. Get started today and experience the future of business automation.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <NavLink to="/contact">
+                <Button variant="secondary" size="xl" className="group shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <Users className="mr-3 h-5 w-5" />
+                  Request a Demo
+                  <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </NavLink>
+              
+              <NavLink to="/solutions">
+                <Button 
+                  variant="outline" 
+                  size="xl" 
+                  className="bg-transparent text-primary-foreground border-2 border-primary-foreground/30 hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <Code className="mr-3 h-5 w-5" />
+                  Explore Solutions
+                </Button>
+              </NavLink>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-primary-foreground/70">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-sm">100+ Happy Clients</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-sm">24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-sm">Nigerian-Built Solutions</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
