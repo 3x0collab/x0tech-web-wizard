@@ -134,25 +134,52 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-glow transition-all duration-300 hover:scale-105">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto mb-4 w-32 h-32 rounded-full overflow-hidden shadow-elegant">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardTitle className="text-2xl">{member.name}</CardTitle>
-                  <p className="text-primary font-semibold">{member.role}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{member.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Team Members */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* CEO */}
+            <Card className="text-center hover:shadow-glow transition-all duration-300">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Users className="h-16 w-16 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Tunde Oluwamo</h3>
+                <p className="text-primary font-medium mb-2">Chief Executive Officer</p>
+                <p className="text-muted-foreground text-sm">
+                  Visionary leader driving technological innovation across Africa with over 10 years of experience in software development and business strategy.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Co-Founder */}
+            <Card className="text-center hover:shadow-glow transition-all duration-300">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Target className="h-16 w-16 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Ismail Adedapo</h3>
+                <p className="text-primary font-medium mb-2">Co-Founder & Lead Developer</p>
+                <p className="text-muted-foreground text-sm">
+                  Technical expert specializing in AI integration and scalable software architecture, passionate about creating intelligent business solutions.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Head of Marketing */}
+            <Card className="text-center hover:shadow-glow transition-all duration-300">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Award className="h-16 w-16 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Iyanu Pamilerin Johnson</h3>
+                <div className="inline-flex items-center gap-2 bg-accent/10 px-3 py-1 rounded-full mb-2">
+                  <span className="text-primary font-medium text-sm">Marketing Lead</span>
+                  <span className="text-xs text-muted-foreground">Driving Growth & Strategy</span>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Strategic marketing professional focused on expanding 3x0Tech's reach across African markets through innovative digital campaigns and partnerships.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -179,8 +206,8 @@ const About = () => {
               <div className="text-primary-foreground/90">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">2</div>
-              <div className="text-primary-foreground/90">Founding Team</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">3</div>
+              <div className="text-primary-foreground/90">Leadership Team</div>
             </div>
           </div>
         </div>

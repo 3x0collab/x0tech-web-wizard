@@ -8,7 +8,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">3x0Tech Solution</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="/lovable-uploads/29d73fec-f2da-4dcd-8ba9-2a01937574bd.png" 
+                alt="3x0Tech Solution" 
+                className="h-10 w-10"
+              />
+              <h3 className="text-2xl font-bold">3x0Tech Solution</h3>
+            </div>
             <p className="mb-4 text-primary-foreground/80">
               Powering Africa's Growth with Smart Software. We build intelligent, 
               affordable, and scalable software solutions for everyday business challenges.

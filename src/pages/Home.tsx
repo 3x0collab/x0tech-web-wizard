@@ -93,8 +93,101 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Solutions Preview Section */}
+      {/* What We Do Section */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              What We Do
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We specialize in creating cutting-edge digital solutions that drive business success
+            </p>
+          </div>
+
+          {/* Service Categories */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+            {/* Website Development */}
+            <Card className="group hover:shadow-glow transition-all duration-300 hover:scale-[1.02] border-border">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Code className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-2xl">Website Development</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-6 text-lg">
+                  Custom-built websites tailored to client needs with responsive, modern design that engages users and drives conversions.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm">
+                    <ChevronRight className="h-4 w-4 text-primary mr-2" />
+                    <span>Responsive & Mobile-First Design</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <ChevronRight className="h-4 w-4 text-primary mr-2" />
+                    <span>E-commerce Solutions</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <ChevronRight className="h-4 w-4 text-primary mr-2" />
+                    <span>SEO Optimization</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <ChevronRight className="h-4 w-4 text-primary mr-2" />
+                    <span>Content Management Systems</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Software Development */}
+            <Card className="group hover:shadow-glow transition-all duration-300 hover:scale-[1.02] border-border">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Zap className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-2xl">Software Development</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-6 text-lg">
+                  Comprehensive software solutions including mobile apps and desktop applications for businesses and organizations.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-foreground">Mobile Apps</h4>
+                    <div className="flex items-center text-sm">
+                      <ChevronRight className="h-4 w-4 text-primary mr-2" />
+                      <span>Android Development</span>
+                    </div>
+                    <div className="flex items-center text-sm">
+                      <ChevronRight className="h-4 w-4 text-primary mr-2" />
+                      <span>iOS Development</span>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-foreground">Desktop Software</h4>
+                    <div className="flex items-center text-sm">
+                      <ChevronRight className="h-4 w-4 text-primary mr-2" />
+                      <span>Business Applications</span>
+                    </div>
+                    <div className="flex items-center text-sm">
+                      <ChevronRight className="h-4 w-4 text-primary mr-2" />
+                      <span>Enterprise Solutions</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Core Solutions Section */}
+      <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

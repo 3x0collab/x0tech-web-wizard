@@ -20,8 +20,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <NavLink to="/" className="text-2xl font-bold text-primary">
-              3x0Tech Solution
+            <NavLink to="/" className="flex items-center gap-2">
+              <img 
+                src="/lovable-uploads/29d73fec-f2da-4dcd-8ba9-2a01937574bd.png" 
+                alt="3x0Tech Solution" 
+                className="h-10 w-10"
+              />
+              <span className="text-xl font-bold text-primary">3x0Tech Solution</span>
             </NavLink>
           </div>
 
