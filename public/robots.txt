@@ -1,3 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://3x0techsolutionsltd.com.ng/sitemap.xml
+
+# Specific bot instructions
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +17,12 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Block common non-essential crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
