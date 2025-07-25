@@ -2,6 +2,7 @@ import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { NavLink } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
 
 const Blog = () => {
   const blogPosts = [
@@ -86,8 +87,26 @@ const Blog = () => {
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "3x0Tech Solutions Blog",
+    "description": "Latest insights on software development, technology trends, and business automation in Africa",
+    "url": "https://3x0techsolutionsltd.com.ng/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "3x0Tech Solutions Ltd"
+    }
+  };
+
   return (
     <div className="min-h-screen py-12">
+      <SEOHead 
+        title="Tech Blog – Software Development Insights | 3x0Tech Solutions"
+        description="Read the latest insights on software development, AI technology, business automation, and digital transformation trends from 3x0Tech Solutions Nigeria."
+        keywords="software development blog, tech insights Nigeria, AI technology trends, business automation, digital transformation Africa, programming tutorials, tech news Nigeria"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">

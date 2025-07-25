@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import SEOHead from '@/components/SEOHead';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -68,8 +69,40 @@ const Contact = () => {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "3x0Tech Solutions Ltd",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+234-816-443-5695",
+          "email": "ismailadedapo1@gmail.com",
+          "contactType": "Customer Service",
+          "availableLanguage": "English",
+          "hoursAvailable": "Mo-Fr 09:00-18:00"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Number 22, Charity Avenue",
+        "addressLocality": "Sango Ota",
+        "addressRegion": "Ogun State",
+        "addressCountry": "NG"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen py-12">
+      <SEOHead 
+        title="Contact 3x0Tech Solutions – Get Custom Software Development Quote"
+        description="Contact 3x0Tech Solutions for custom software development, web design, and AI solutions. Located in Ogun State, Nigeria. Get your free consultation today."
+        keywords="contact 3x0tech, software development quote Nigeria, custom software consultation, web development services Nigeria, business software inquiry, tech solutions contact"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">

@@ -2,6 +2,7 @@ import { ArrowRight, Zap, Users, Calculator, Code, ChevronRight } from 'lucide-r
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { NavLink } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
 import heroImage from '@/assets/hero-banner.jpg';
 import pyeImage from '@/assets/pye-ai-support.jpg';
 import orbityxImage from '@/assets/orbityx-hr.jpg';
@@ -44,8 +45,54 @@ const Home = () => {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3x0Tech Solutions Ltd",
+    "alternateName": "3x0Tech Solution",
+    "url": "https://3x0techsolutionsltd.com.ng",
+    "logo": "https://3x0techsolutionsltd.com.ng/lovable-uploads/29d73fec-f2da-4dcd-8ba9-2a01937574bd.png",
+    "description": "Nigerian tech startup building intelligent, affordable, and scalable software solutions including AI assistants, HR software, accounting tools, and learning platforms.",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Number 22, Charity Avenue",
+      "addressLocality": "Sango Ota",
+      "addressRegion": "Ogun State",
+      "addressCountry": "NG"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-816-443-5695",
+      "email": "ismailadedapo1@gmail.com",
+      "contactType": "Customer Service",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://3x0techsolutionsltd.com.ng"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Software Development Services",
+      "itemListElement": solutions.map(solution => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": solution.title,
+          "description": solution.description
+        }
+      }))
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="3x0Tech Solutions Ltd – Web & Software Development Experts in Nigeria"
+        description="Leading Nigerian tech startup building intelligent software solutions. We create custom websites, mobile apps, AI assistants, HR software, and accounting tools for businesses across Africa."
+        keywords="web development Nigeria, software development Lagos, mobile app developers Nigeria, custom software Nigeria, AI assistants, HR software, accounting software, Nigerian tech startup, business automation Nigeria"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 bg-gradient-subtle overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -84,7 +131,7 @@ const Home = () => {
               <div className="w-full h-96 rounded-2xl shadow-elegant overflow-hidden">
                 <img 
                   src={heroImage} 
-                  alt="Technology and innovation in Africa" 
+                  alt="3x0Tech Solutions team developing innovative software solutions for African businesses" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -204,7 +251,7 @@ const Home = () => {
                 <div className="aspect-video overflow-hidden rounded-t-lg">
                   <img 
                     src={solution.image} 
-                    alt={solution.title}
+                    alt={`${solution.title} - ${solution.subtitle} software solution by 3x0Tech`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

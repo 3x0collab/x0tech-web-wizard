@@ -2,6 +2,7 @@ import { Zap, Users, Calculator, Code, ArrowRight, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { NavLink } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
 import pyeImage from '@/assets/pye-ai-support.jpg';
 import orbityxImage from '@/assets/orbityx-hr.jpg';
 import quicksumImage from '@/assets/quicksum-accounting.jpg';
@@ -103,8 +104,33 @@ const Solutions = () => {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "3x0Tech Software Solutions",
+    "description": "Comprehensive suite of intelligent software solutions for businesses",
+    "itemListElement": solutions.map((solution, index) => ({
+      "@type": "SoftwareApplication",
+      "position": index + 1,
+      "name": solution.title,
+      "description": solution.description,
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, Windows, macOS, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "category": "Software Development Service"
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen py-12">
+      <SEOHead 
+        title="Software Solutions – PYE AI, Orbityx HR, Quicksum & Step-Code | 3x0Tech"
+        description="Explore our comprehensive software solutions: PYE AI customer support, Orbityx HR management, Quicksum accounting software, and Step-Code learning platform. Built for African businesses."
+        keywords="PYE AI assistant, Orbityx HR software, Quicksum accounting, Step-Code learning platform, business software Nigeria, AI customer support, HR automation Africa, accounting software Nigeria"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
@@ -181,7 +207,7 @@ const Solutions = () => {
                     <div className="w-full h-96 rounded-2xl shadow-elegant overflow-hidden">
                       <img 
                         src={solution.image} 
-                        alt={`${solution.title} - ${solution.subtitle}`}
+                        alt={`${solution.title} ${solution.subtitle} - Advanced business software solution by 3x0Tech for Nigerian companies`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>

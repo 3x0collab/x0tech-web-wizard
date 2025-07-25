@@ -1,5 +1,6 @@
 import { Target, Eye, Award, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import SEOHead from '@/components/SEOHead';
 import teamImage from '@/assets/team-collaboration.jpg';
 
 const About = () => {
@@ -41,8 +42,44 @@ const About = () => {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "3x0Tech Solutions Ltd",
+      "description": "Nigerian tech startup building intelligent, affordable, and scalable software solutions for everyday business challenges.",
+      "foundingDate": "2024",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Tunde Oluwamo",
+          "jobTitle": "CEO"
+        },
+        {
+          "@type": "Person", 
+          "name": "Ismail Adedapo",
+          "jobTitle": "Co-Founder & Lead Developer"
+        }
+      ],
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Iyanu Pamilerin Johnson", 
+          "jobTitle": "Head of Marketing"
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen py-12">
+      <SEOHead 
+        title="About 3x0Tech Solutions – Nigerian Software Development Experts"
+        description="Learn about 3x0Tech Solutions, a leading Nigerian tech startup building intelligent software solutions. Meet our team and discover our mission to transform African businesses."
+        keywords="about 3x0tech, Nigerian software company, tech startup Nigeria, software development team, African technology solutions, business automation Africa"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
@@ -83,7 +120,7 @@ const About = () => {
               <div className="w-full h-96 rounded-2xl shadow-elegant overflow-hidden">
                 <img 
                   src={teamImage} 
-                  alt="Team collaboration at 3x0Tech Solution" 
+                  alt="3x0Tech Solutions team collaborating on innovative software development projects in Nigeria" 
                   className="w-full h-full object-cover"
                 />
               </div>
