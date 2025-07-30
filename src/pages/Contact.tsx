@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import SEOHead from '@/components/SEOHead';
 
 const Contact = () => {
@@ -15,6 +16,7 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,34 +27,54 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error: any) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error Sending Message",
+        description: "Please try again or contact us directly at info@3x0techsolutionsltd.com.ng",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: 'Email Address',
-      details: 'ismailadedapo1@gmail.com',
+      details: 'info@3x0techsolutionsltd.com.ng',
       description: 'Send us an email anytime'
     },
     {
       icon: Phone,
-      title: 'Phone Number',
-      details: '08164435695',
+      title: 'Phone Numbers',
+      details: '0816 4435695, 0701 657 3950, 0802 906 3771',
       description: 'Call us during business hours'
     },
     {
@@ -79,7 +101,7 @@ const Contact = () => {
         {
           "@type": "ContactPoint",
           "telephone": "+234-816-443-5695",
-          "email": "ismailadedapo1@gmail.com",
+          "email": "info@3x0techsolutionsltd.com.ng",
           "contactType": "Customer Service",
           "availableLanguage": "English",
           "hoursAvailable": "Mo-Fr 09:00-18:00"
@@ -189,9 +211,15 @@ const Contact = () => {
                       />
                     </div>
                     
-                    <Button type="submit" variant="default" size="lg" className="w-full group">
+                    <Button 
+                      type="submit" 
+                      variant="default" 
+                      size="lg" 
+                      className="w-full group" 
+                      disabled={isSubmitting}
+                    >
                       <Send className="w-4 h-4 mr-2" />
-                      Send Message
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
                   </form>
                 </CardContent>
