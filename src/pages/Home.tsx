@@ -64,7 +64,7 @@ const Home = () => {
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+234-816-443-5695",
-      "email": "info@3x0techsolutionsltd.com.ng",
+      "email": "ismailadedapo1@gmail.com",
       "contactType": "Customer Service",
       "availableLanguage": "English"
     },

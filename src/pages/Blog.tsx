@@ -100,7 +100,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen py-12">
       <SEOHead 
         title="Tech Blog – Software Development Insights | 3x0Tech Solutions"
         description="Read the latest insights on software development, AI technology, business automation, and digital transformation trends from 3x0Tech Solutions Nigeria."
@@ -108,76 +108,66 @@ const Blog = () => {
         structuredData={structuredData}
       />
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-primary overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-shift opacity-30"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground mb-8 tracking-tight">
+      <section className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               3x0Tech Blog
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Insights, updates, and expert perspectives on technology, business growth, 
               and digital transformation in Africa.
             </p>
-            <div className="mt-8 flex justify-center">
-              <div className="h-1 w-24 bg-gradient-secondary rounded-full"></div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Featured Post */}
       {featuredPost && (
-        <section className="py-24 bg-gradient-card">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="mb-12 text-center animate-slide-in">
-              <span className="inline-block px-6 py-3 bg-gradient-primary text-primary-foreground text-sm font-semibold rounded-full shadow-soft">
-                ✨ Featured Article
+            <div className="mb-8">
+              <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-sm font-medium rounded-full">
+                Featured Article
               </span>
             </div>
             
-            <Card className="overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-[1.02] bg-gradient-card border-0 animate-bounce-in">
+            <Card className="overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="aspect-video lg:aspect-auto overflow-hidden">
+                <div className="aspect-video lg:aspect-auto">
                   <img 
                     src={featuredPost.image} 
                     alt={featuredPost.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <CardContent className="p-10 flex flex-col justify-center bg-white/80 backdrop-blur-sm">
-                  <div className="mb-6">
-                    <span className="inline-block px-4 py-2 bg-gradient-secondary text-secondary-foreground text-sm font-semibold rounded-full shadow-soft">
+                <CardContent className="p-8 flex flex-col justify-center">
+                  <div className="mb-4">
+                    <span className="inline-block px-2 py-1 bg-accent text-accent-foreground text-xs font-medium rounded">
                       {featuredPost.category}
                     </span>
                   </div>
                   
-                  <CardTitle className="text-3xl md:text-4xl mb-6 leading-tight font-extrabold text-foreground">
+                  <CardTitle className="text-2xl md:text-3xl mb-4 leading-tight">
                     {featuredPost.title}
                   </CardTitle>
                   
-                  <CardDescription className="text-lg mb-8 text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-base mb-6">
                     {featuredPost.excerpt}
                   </CardDescription>
                   
-                  <div className="flex items-center text-sm text-muted-foreground mb-8 space-x-6">
-                    <div className="flex items-center">
-                      <User className="h-5 w-5 mr-2 text-primary" />
-                      <span className="font-medium">{featuredPost.author}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar className="h-5 w-5 mr-2 text-primary" />
-                      <span>{new Date(featuredPost.date).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="h-5 w-5 mr-2 text-primary" />
-                      <span>{featuredPost.readTime}</span>
-                    </div>
+                  <div className="flex items-center text-sm text-muted-foreground mb-6">
+                    <User className="h-4 w-4 mr-1" />
+                    <span className="mr-4">{featuredPost.author}</span>
+                    <Calendar className="h-4 w-4 mr-1" />
+                    <span className="mr-4">{new Date(featuredPost.date).toLocaleDateString()}</span>
+                    <Clock className="h-4 w-4 mr-1" />
+                    <span>{featuredPost.readTime}</span>
                   </div>
                   
-                  <Button variant="default" size="lg" className="group w-fit shadow-soft hover:shadow-glow transition-all duration-300">
+                  <Button variant="default" size="lg" className="group w-fit">
                     Read Full Article
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
               </div>
@@ -187,18 +177,15 @@ const Blog = () => {
       )}
 
       {/* Categories Filter */}
-      <section className="py-16 bg-gradient-subtle">
+      <section className="py-8 bg-muted/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Explore by Category</h2>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((category, index) => (
               <Button
                 key={index}
                 variant={index === 0 ? "default" : "outline"}
-                size="lg"
-                className={`mb-2 shadow-soft hover:shadow-glow transition-all duration-300 hover:scale-105 ${
-                  index === 0 ? 'bg-gradient-primary' : 'hover:bg-gradient-primary hover:text-primary-foreground'
-                }`}
+                size="sm"
+                className="mb-2"
               >
                 {category}
               </Button>
@@ -208,64 +195,47 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-24 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Latest Articles</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover insights, tips, and industry updates from our team of experts
-            </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post, index) => (
-              <Card 
-                key={post.id} 
-                className={`overflow-hidden hover:shadow-glow transition-all duration-500 hover:scale-[1.05] bg-gradient-card border-0 shadow-soft group animate-fade-in`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="aspect-video overflow-hidden relative">
+            {regularPosts.map((post) => (
+              <Card key={post.id} className="overflow-hidden hover:shadow-glow transition-all duration-300 hover:scale-[1.02]">
+                <div className="aspect-video overflow-hidden">
                   <img 
                     src={post.image} 
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </div>
                 
-                <CardHeader className="pb-4">
-                  <div className="mb-3">
-                    <span className="inline-block px-3 py-1 bg-gradient-secondary text-secondary-foreground text-xs font-semibold rounded-full shadow-soft">
+                <CardHeader className="pb-3">
+                  <div className="mb-2">
+                    <span className="inline-block px-2 py-1 bg-accent text-accent-foreground text-xs font-medium rounded">
                       {post.category}
                     </span>
                   </div>
-                  <CardTitle className="text-xl leading-tight line-clamp-2 font-bold group-hover:text-primary transition-colors duration-300">
+                  <CardTitle className="text-lg leading-tight line-clamp-2">
                     {post.title}
                   </CardTitle>
                 </CardHeader>
                 
                 <CardContent className="pt-0">
-                  <CardDescription className="mb-6 line-clamp-3 text-base leading-relaxed">
+                  <CardDescription className="mb-4 line-clamp-3">
                     {post.excerpt}
                   </CardDescription>
                   
-                  <div className="flex items-center text-sm text-muted-foreground mb-6 space-x-4">
-                    <div className="flex items-center">
-                      <User className="h-4 w-4 mr-1 text-primary" />
-                      <span className="font-medium">{post.author}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1 text-primary" />
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-1 text-primary" />
-                      <span>{post.readTime}</span>
-                    </div>
+                  <div className="flex items-center text-xs text-muted-foreground mb-4">
+                    <User className="h-3 w-3 mr-1" />
+                    <span className="mr-3">{post.author}</span>
+                    <Calendar className="h-3 w-3 mr-1" />
+                    <span className="mr-3">{new Date(post.date).toLocaleDateString()}</span>
+                    <Clock className="h-3 w-3 mr-1" />
+                    <span>{post.readTime}</span>
                   </div>
                   
-                  <Button variant="outline" size="lg" className="group w-full shadow-soft hover:shadow-glow hover:bg-gradient-primary hover:text-primary-foreground transition-all duration-300">
+                  <Button variant="outline" size="sm" className="group w-full">
                     Read More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
               </Card>
@@ -275,51 +245,43 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Subscription */}
-      <section className="py-24 bg-gradient-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-shift opacity-20"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-primary-foreground mb-8 tracking-tight">
-              Stay Updated with Our Latest Insights
-            </h2>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Subscribe to our newsletter and get the latest articles, tips, and updates 
-              delivered directly to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 rounded-lg border-0 text-foreground shadow-soft focus:shadow-glow transition-all duration-300 text-lg"
-              />
-              <Button variant="secondary" size="lg" className="px-8 py-4 shadow-soft hover:shadow-glow transition-all duration-300 hover:scale-105">
-                Subscribe Now
-              </Button>
-            </div>
-            <p className="text-primary-foreground/70 text-sm mt-4">
-              No spam, unsubscribe at any time.
-            </p>
+      <section className="py-20 bg-gradient-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+            Stay Updated with Our Latest Insights
+          </h2>
+          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Subscribe to our newsletter and get the latest articles, tips, and updates 
+            delivered directly to your inbox.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              className="flex-1 px-4 py-3 rounded-md border-0 text-foreground"
+            />
+            <Button variant="secondary" size="lg">
+              Subscribe
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="py-24 bg-gradient-card">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Have a Question or Topic Suggestion?
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              We'd love to hear from you. Contact us with your questions or suggestions for future articles.
-            </p>
-            <NavLink to="/contact">
-              <Button variant="default" size="lg" className="group shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105 px-8 py-4 text-lg">
-                Get in Touch
-                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
-              </Button>
-            </NavLink>
-          </div>
+          <h2 className="text-3xl font-bold text-foreground mb-4">
+            Have a Question or Topic Suggestion?
+          </h2>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            We'd love to hear from you. Contact us with your questions or suggestions for future articles.
+          </p>
+          <NavLink to="/contact">
+            <Button variant="default" size="lg" className="group">
+              Get in Touch
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </NavLink>
         </div>
       </section>
     </div>
