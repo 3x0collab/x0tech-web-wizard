@@ -49,7 +49,7 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "3x0Tech Solutions Ltd",
-    "alternateName": "3x0Tech Solution",
+    "alternateName": "3x0Tech Solutions",
     "url": "https://3x0techsolutionsltd.com.ng",
     "logo": "https://3x0techsolutionsltd.com.ng/lovable-uploads/29d73fec-f2da-4dcd-8ba9-2a01937574bd.png",
     "description": "Nigerian tech startup building intelligent, affordable, and scalable software solutions including AI assistants, HR software, accounting tools, and learning platforms.",
@@ -102,36 +102,36 @@ const Home = () => {
         ></div>
         <div className="relative z-10 container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left animate-fade-in">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Powering Africa's Growth with{' '}
-                <span className="text-primary bg-gradient-primary bg-clip-text text-transparent">
+                <span className="gradient-text-flow">
                   Smart Software
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-                3x0Tech Solution is a Nigerian tech startup building intelligent, affordable, 
+                3x0Tech Solutions is a Nigerian tech startup building intelligent, affordable, 
                 and scalable software solutions for everyday business challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <NavLink to="/contact">
-                  <Button variant="hero" size="xl" className="group">
+                  <Button variant="hero" size="xl" className="group pulse-glow">
                     Get Started
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </NavLink>
                 <NavLink to="/solutions">
-                  <Button variant="outline-hero" size="xl">
+                  <Button variant="outline-hero" size="xl" className="hover-lift">
                     Our Solutions
                   </Button>
                 </NavLink>
               </div>
             </div>
-            <div className="relative hidden lg:block">
-              <div className="w-full h-96 rounded-2xl shadow-elegant overflow-hidden">
+            <div className="relative hidden lg:block float">
+              <div className="w-full h-96 rounded-2xl shadow-elegant overflow-hidden hover-lift">
                 <img 
                   src={heroImage} 
-                  alt="3x0Tech Solutions team developing innovative software solutions for African businesses" 
+                  alt="3x0Tech Solutions team developing innovative software solutions for African businesses"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -236,7 +236,7 @@ const Home = () => {
       {/* Our Core Solutions Section */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Our Core Solutions
             </h2>
@@ -245,14 +245,14 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-animation">
             {solutions.map((solution, index) => (
-              <Card key={index} className="group hover:shadow-glow transition-all duration-300 hover:scale-[1.02] border-border">
+              <Card key={index} className="group card-interactive border-border">
                 <div className="aspect-video overflow-hidden rounded-t-lg">
                   <img 
                     src={solution.image} 
                     alt={`${solution.title} - ${solution.subtitle} software solution by 3x0Tech`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
                 <CardHeader>
@@ -297,10 +297,10 @@ const Home = () => {
       <section className="relative py-24 bg-primary overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-accent rounded-full blur-xl"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-accent rounded-full blur-lg"></div>
-          <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-accent rounded-full blur-lg"></div>
+          <div className="absolute top-10 left-10 w-32 h-32 bg-accent rounded-full blur-xl bounce-subtle"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent rounded-full blur-xl float"></div>
+          <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-accent rounded-full blur-lg pulse-glow"></div>
+          <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-accent rounded-full blur-lg float"></div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4">

@@ -85,7 +85,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              About 3x0Tech Solution
+              About 3x0Tech Solutions
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We are a Nigerian tech startup dedicated to building intelligent, affordable, 
@@ -120,7 +120,7 @@ const About = () => {
               <div className="w-full h-96 rounded-2xl shadow-elegant overflow-hidden">
                 <img 
                   src={teamImage} 
-                  alt="3x0Tech Solutions team collaborating on innovative software development projects in Nigeria" 
+                  alt="3x0Tech Solutions team collaborating on innovative software development projects in Nigeria"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -167,7 +167,7 @@ const About = () => {
               Meet Our Leadership Team
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The visionaries behind 3x0Tech Solution
+              The visionaries behind 3x0Tech Solutions
             </p>
           </div>
 

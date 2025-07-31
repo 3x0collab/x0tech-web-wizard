@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,10 +11,10 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src="/lovable-uploads/29d73fec-f2da-4dcd-8ba9-2a01937574bd.png" 
-                alt="3x0Tech Solution" 
-                className="h-10 w-10"
+                alt="3x0Tech Solutions" 
+                className="h-10 w-10 animate-pulse"
               />
-              <h3 className="text-2xl font-bold">3x0Tech Solution</h3>
+              <h3 className="text-2xl font-bold">3x0Tech Solutions</h3>
             </div>
             <p className="mb-4 text-primary-foreground/80">
               Powering Africa's Growth with Smart Software. We build intelligent, 
@@ -91,13 +91,33 @@ const Footer = () => {
         {/* Social Links & Copyright */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <Facebook className="h-6 w-6 text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
-            <Twitter className="h-6 w-6 text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
-            <Linkedin className="h-6 w-6 text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
-            <Instagram className="h-6 w-6 text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
+            <a 
+              href="https://www.facebook.com/p/3x0Tech-Solutions-100089180495872/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transform transition-all duration-300 hover:scale-110 hover:rotate-6"
+            >
+              <Facebook className="h-6 w-6 text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
+            </a>
+            <a 
+              href="https://x.com/PrinceAdedapo6" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transform transition-all duration-300 hover:scale-110 hover:-rotate-6"
+            >
+              <Twitter className="h-6 w-6 text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
+            </a>
+            <a 
+              href="https://ng.linkedin.com/in/ismail-adedapo-7b84a7190" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transform transition-all duration-300 hover:scale-110 hover:rotate-6"
+            >
+              <Linkedin className="h-6 w-6 text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
+            </a>
           </div>
           <div className="text-center text-primary-foreground/60">
-            <p>&copy; 2024 3x0Tech Solution. All rights reserved.</p>
+            <p>&copy; 2024 3x0Tech Solutions. All rights reserved.</p>
           </div>
         </div>
       </div>
