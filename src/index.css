@@ -36,12 +36,15 @@ All colors MUST be HSL.
     --input: 142 20% 88%;
     --ring: 142 76% 36%;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 60% 45%));
-    --gradient-subtle: linear-gradient(180deg, hsl(142 30% 98%), hsl(0 0% 100%));
-    --shadow-elegant: 0 10px 30px -10px hsl(142 76% 36% / 0.2);
-    --shadow-glow: 0 0 40px hsl(142 60% 45% / 0.15);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Enhanced design tokens for modern appeal */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(195 100% 50%), hsl(142 60% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(142 30% 98%), hsl(195 50% 98%), hsl(0 0% 100%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36% / 0.9), hsl(195 100% 50% / 0.8));
+    --shadow-elegant: 0 20px 40px -12px hsl(142 76% 36% / 0.25);
+    --shadow-glow: 0 0 60px hsl(142 60% 45% / 0.2);
+    --shadow-card: 0 4px 20px hsl(142 76% 36% / 0.1);
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-fast: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --radius: 0.5rem;
 
