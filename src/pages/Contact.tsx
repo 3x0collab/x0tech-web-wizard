@@ -69,19 +69,19 @@ const Contact = () => {
       icon: Mail,
       title: 'Email Address',
       details: 'info@3x0techsolutionsltd.com.ng',
-      description: 'Send us an email anytime'
+      description: 'Professional inquiries and project consultations'
     },
     {
       icon: Phone,
       title: 'Phone Numbers',
       details: '0816 4435695, 0701 657 3950, 0802 906 3771',
-      description: 'Call us during business hours'
+      description: 'Direct consultation and technical support'
     },
     {
       icon: MapPin,
       title: 'Office Address',
       details: 'Number 22, Charity Avenue, Sango Ota, Ogun State, Nigeria',
-      description: 'Visit our headquarters'
+      description: 'Technology development center and client meeting space'
     },
     {
       icon: Clock,
@@ -120,9 +120,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen py-12">
       <SEOHead 
-        title="Contact 3x0Tech Solutions – Get Custom Software Development Quote"
-        description="Contact 3x0Tech Solutions for custom software development, web design, and AI solutions. Located in Ogun State, Nigeria. Get your free consultation today."
-        keywords="contact 3x0tech, software development quote Nigeria, custom software consultation, web development services Nigeria, business software inquiry, tech solutions contact"
+        title="Contact 3x0Tech Solutions – Enterprise Technology Consulting & Development"
+        description="Partner with 3x0Tech Solutions for enterprise software development, digital transformation consulting, and intelligent technology solutions. Schedule your strategic consultation today."
+        keywords="enterprise technology consulting Nigeria, digital transformation services, custom software development consultation, business technology solutions Africa, enterprise software development Nigeria"
         structuredData={structuredData}
       />
       {/* Hero Section */}
@@ -133,8 +133,8 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ready to transform your business with our smart software solutions? 
-              Contact us today and let's discuss how we can help you grow.
+              Ready to accelerate your digital transformation? Partner with us to unlock innovative technology solutions 
+              that drive measurable business results. Let's explore how we can elevate your organization's capabilities.
             </p>
           </div>
         </div>
@@ -150,7 +150,7 @@ const Contact = () => {
                 <CardHeader>
                   <CardTitle className="text-2xl">Send us a Message</CardTitle>
                   <CardDescription>
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Share your project requirements and business objectives. Our technology consultants will provide a comprehensive proposal tailored to your needs.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -233,7 +233,7 @@ const Contact = () => {
                   Contact Information
                 </h2>
                 <p className="text-muted-foreground">
-                  We're here to help you succeed. Reach out to us through any of the following channels.
+                  Connect with our expert team to discuss your technology requirements and discover how our innovative solutions can transform your business operations.
                 </p>
               </div>
 
@@ -289,55 +289,55 @@ const Contact = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Quick answers to common questions about our services
+              Essential information about our development process, implementation timelines, and service offerings
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">How quickly can you implement a solution?</CardTitle>
+                <CardTitle className="text-lg">What are your implementation timelines?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Implementation time varies by solution complexity, typically ranging from 1-4 weeks 
-                  for most of our software solutions.
+                  Project timelines depend on scope and complexity. Most enterprise solutions are delivered within 2-8 weeks, 
+                  including requirements analysis, development, testing, and deployment phases.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Do you provide training and support?</CardTitle>
+                <CardTitle className="text-lg">What support services do you offer?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Yes, we provide comprehensive training and ongoing support to ensure you get 
-                  the most value from our solutions.
+                  We provide comprehensive onboarding, user training, technical documentation, and ongoing support 
+                  to ensure successful adoption and maximum ROI from your technology investment.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Can solutions be customized for my business?</CardTitle>
+                <CardTitle className="text-lg">How do you approach customization?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Absolutely! All our solutions can be customized to meet your specific 
-                  business requirements and workflows.
+                  Every solution is tailored to your unique business processes, industry requirements, and growth objectives. 
+                  We conduct thorough analysis to ensure optimal integration with your existing systems.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">What are your pricing models?</CardTitle>
+                <CardTitle className="text-lg">What investment models are available?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We offer flexible pricing models including one-time licenses and subscription 
-                  plans to fit different business needs and budgets.
+                  We offer flexible engagement models including project-based development, software licensing, 
+                  and subscription services. All pricing is transparent and scaled to deliver optimal value for your investment.
                 </p>
               </CardContent>
             </Card>

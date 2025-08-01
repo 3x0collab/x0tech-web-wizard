@@ -17,8 +17,8 @@ const Footer = () => {
               <h3 className="text-2xl font-bold">3x0Tech Solutions</h3>
             </div>
             <p className="mb-4 text-primary-foreground/80">
-              Powering Africa's Growth with Smart Software. We build intelligent, 
-              affordable, and scalable software solutions for everyday business challenges.
+              Transforming African Business with Intelligent Technology. We deliver enterprise-grade software solutions 
+              that drive digital transformation, operational excellence, and sustainable growth across diverse industries.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">

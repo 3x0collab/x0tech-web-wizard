@@ -23,22 +23,22 @@ const About = () => {
     {
       icon: Target,
       title: 'Innovation',
-      description: 'We continuously push boundaries to create cutting-edge solutions that address real-world challenges.'
+      description: 'We pioneer breakthrough technologies and methodologies that redefine industry standards and create lasting competitive advantages for our clients.'
     },
     {
       icon: Users,
       title: 'Collaboration',
-      description: 'We believe in the power of teamwork and partnerships to achieve extraordinary results.'
+      description: 'We foster deep partnerships with our clients, understanding that the best solutions emerge from collaborative relationships built on trust and shared vision.'
     },
     {
       icon: Award,
       title: 'Excellence',
-      description: 'We are committed to delivering the highest quality products and services to our clients.'
+      description: 'We maintain uncompromising standards in every aspect of our work, from code quality and security to user experience and client satisfaction.'
     },
     {
       icon: Eye,
       title: 'Transparency',
-      description: 'We maintain open and honest communication in all our business relationships.'
+      description: 'We build trust through clear communication, honest feedback, and complete visibility into our processes, progress, and decision-making.'
     }
   ];
 
@@ -75,9 +75,9 @@ const About = () => {
   return (
     <div className="min-h-screen py-12">
       <SEOHead 
-        title="About 3x0Tech Solutions – Nigerian Software Development Experts"
-        description="Learn about 3x0Tech Solutions, a leading Nigerian tech startup building intelligent software solutions. Meet our team and discover our mission to transform African businesses."
-        keywords="about 3x0tech, Nigerian software company, tech startup Nigeria, software development team, African technology solutions, business automation Africa"
+        title="About 3x0Tech Solutions – Leading African Technology Innovation Company"
+        description="Discover 3x0Tech Solutions, a forward-thinking technology company revolutionizing African business operations through intelligent software platforms and digital transformation services."
+        keywords="about 3x0tech solutions, African technology company, enterprise software development Nigeria, digital transformation Africa, technology innovation, business software solutions Africa"
         structuredData={structuredData}
       />
       {/* Hero Section */}
@@ -88,8 +88,8 @@ const About = () => {
               About 3x0Tech Solutions
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We are a Nigerian tech startup dedicated to building intelligent, affordable, 
-              and scalable software solutions that drive business growth across Africa.
+              We are a forward-thinking technology company committed to revolutionizing how African businesses operate, 
+              grow, and compete in the global digital economy through innovative software solutions.
             </p>
           </div>
         </div>
@@ -104,16 +104,17 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                To simplify African business operations using smart, AI-powered, and user-friendly digital tools.
+                To democratize enterprise-grade technology across Africa by delivering intelligent, scalable solutions 
+                that transform business operations and accelerate sustainable growth.
               </p>
               <p className="text-muted-foreground mb-6">
-                We believe that technology should be accessible to every business, regardless of size or budget. 
-                Our solutions are designed to be intuitive, affordable, and scalable, helping African businesses 
-                compete on a global scale.
+                We champion the belief that every organization deserves access to world-class technology. Our commitment 
+                extends beyond software development—we partner with businesses to understand their unique challenges and 
+                engineer solutions that deliver measurable impact and competitive advantage.
               </p>
               <p className="text-muted-foreground">
-                Through innovation and dedication, we're building the future of business software in Africa, 
-                one solution at a time.
+                By combining cutting-edge innovation with deep market insight, we're not just building software—we're 
+                shaping the digital infrastructure that will power Africa's next generation of business leaders.
               </p>
             </div>
             <div className="relative">
@@ -182,7 +183,8 @@ const About = () => {
                 <h3 className="text-xl font-bold text-foreground mb-2">Tunde Oluwamo</h3>
                 <p className="text-primary font-medium mb-2">Chief Executive Officer</p>
                 <p className="text-muted-foreground text-sm">
-                  Visionary leader driving technological innovation across Africa with over 10 years of experience in software development and business strategy.
+                  Strategic technology executive with extensive experience scaling digital transformation initiatives across emerging markets. 
+                  Passionate about leveraging technology to solve complex business challenges and drive sustainable growth.
                 </p>
               </CardContent>
             </Card>
@@ -196,7 +198,8 @@ const About = () => {
                 <h3 className="text-xl font-bold text-foreground mb-2">Ismail Adedapo</h3>
                 <p className="text-primary font-medium mb-2">Co-Founder & Lead Developer</p>
                 <p className="text-muted-foreground text-sm">
-                  Technical expert specializing in AI integration and scalable software architecture, passionate about creating intelligent business solutions.
+                  Senior software architect and AI specialist focused on building robust, scalable platforms that deliver exceptional performance. 
+                  Expert in modern development frameworks and emerging technologies.
                 </p>
               </CardContent>
             </Card>
@@ -213,7 +216,8 @@ const About = () => {
                   <span className="text-xs text-muted-foreground">Driving Growth & Strategy</span>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Strategic marketing professional focused on expanding 3x0Tech's reach across African markets through innovative digital campaigns and partnerships.
+                  Growth marketing strategist with expertise in digital transformation and market expansion. 
+                  Dedicated to building brand presence and driving customer acquisition through data-driven marketing initiatives.
                 </p>
               </CardContent>
             </Card>

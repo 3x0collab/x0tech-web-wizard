@@ -13,32 +13,32 @@ const Home = () => {
   const solutions = [
     {
       title: 'PYE',
-      subtitle: 'AI Customer Support Assistant',
-      description: 'Intelligent AI-powered personal customer care assistant that integrates seamlessly into websites and platforms.',
+      subtitle: 'AI-Powered Customer Experience Platform',
+      description: 'Revolutionary conversational AI that transforms customer interactions with intelligent, 24/7 support capabilities and seamless integration across all digital touchpoints.',
       image: pyeImage,
       icon: Zap,
       features: ['24/7 Customer Support', 'Real-time Interaction', 'Smart Guidance']
     },
     {
       title: 'Orbityx',
-      subtitle: 'Human Resource Automation Software',
-      description: 'Complete HR management system handling recruitment, onboarding, leave tracking, and performance management.',
+      subtitle: 'Enterprise HR Management Suite',
+      description: 'Comprehensive human capital management platform that automates recruitment, streamlines workforce operations, and delivers actionable insights for strategic HR decisions.',
       image: orbityxImage,
       icon: Users,
       features: ['Automated Recruitment', 'Employee Management', 'Performance Tracking']
     },
     {
       title: 'Quicksum',
-      subtitle: 'Simplified Accounting Software',
-      description: 'Fast, lightweight accounting tool for small businesses handling invoices, financial summaries, and receipts.',
+      subtitle: 'Intelligent Financial Management Platform',
+      description: 'Cloud-based accounting solution that simplifies financial operations with automated reporting, real-time insights, and intelligent expense management for growing businesses.',
       image: quicksumImage,
       icon: Calculator,
       features: ['Invoice Management', 'Financial Reports', 'Receipt Tracking']
     },
     {
       title: 'Step-Code',
-      subtitle: 'Interactive Coding & Learning Platform',
-      description: 'E-learning platform for coding education, project building, and certification programs for developers.',
+      subtitle: 'Advanced Developer Education Ecosystem',
+      description: 'Immersive coding education platform featuring hands-on learning experiences, industry-standard projects, and recognized certifications that bridge the gap between education and career success.',
       image: stepCodeImage,
       icon: Code,
       features: ['Interactive Learning', 'Project Building', 'Certifications']
@@ -88,9 +88,9 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="3x0Tech Solutions Ltd – Web & Software Development Experts in Nigeria"
-        description="Leading Nigerian tech startup building intelligent software solutions. We create custom websites, mobile apps, AI assistants, HR software, and accounting tools for businesses across Africa."
-        keywords="web development Nigeria, software development Lagos, mobile app developers Nigeria, custom software Nigeria, AI assistants, HR software, accounting software, Nigerian tech startup, business automation Nigeria"
+        title="3x0Tech Solutions Ltd – Enterprise Software Development & Digital Transformation"
+        description="Transform your business with cutting-edge software solutions from Nigeria's leading technology company. We deliver AI-powered platforms, enterprise applications, and digital transformation services across Africa."
+        keywords="enterprise software development Nigeria, digital transformation Africa, AI-powered business solutions, custom software development Lagos, business automation Nigeria, technology consulting Africa, software integration services"
         structuredData={structuredData}
       />
       {/* Hero Section */}
@@ -103,16 +103,16 @@ const Home = () => {
         <div className="relative z-10 container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Powering Africa's Growth with{' '}
-                <span className="gradient-text-flow">
-                  Smart Software
-                </span>
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-                3x0Tech Solutions is a Nigerian tech startup building intelligent, affordable, 
-                and scalable software solutions for everyday business challenges.
-              </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Transforming African Business with{' '}
+              <span className="gradient-text-flow">
+                Intelligent Technology
+              </span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+              We empower businesses across Africa with cutting-edge software solutions that drive efficiency, 
+              growth, and digital transformation. From AI-powered automation to enterprise-grade platforms.
+            </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <NavLink to="/contact">
                   <Button variant="hero" size="xl" className="group pulse-glow">
@@ -148,7 +148,8 @@ const Home = () => {
               What We Do
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We specialize in creating cutting-edge digital solutions that drive business success
+              We partner with forward-thinking organizations to deliver transformative technology solutions 
+              that accelerate growth and unlock new possibilities
             </p>
           </div>
 
@@ -166,7 +167,8 @@ const Home = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-6 text-lg">
-                  Custom-built websites tailored to client needs with responsive, modern design that engages users and drives conversions.
+                  Sophisticated web applications engineered for performance, scalability, and user engagement. 
+                  We craft digital experiences that convert visitors into customers and drive measurable business results.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center text-sm">
@@ -201,7 +203,8 @@ const Home = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-6 text-lg">
-                  Comprehensive software solutions including mobile apps and desktop applications for businesses and organizations.
+                  Enterprise-grade software platforms built with modern architecture and best practices. 
+                  We deliver robust, secure applications that scale with your business and integrate seamlessly with existing systems.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-3">
@@ -241,7 +244,8 @@ const Home = () => {
               Our Core Solutions
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Discover our suite of innovative software solutions designed to transform your business operations
+              Explore our portfolio of industry-leading platforms engineered to streamline operations, 
+              enhance productivity, and drive sustainable business growth
             </p>
           </div>
 
@@ -318,7 +322,7 @@ const Home = () => {
             
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Join hundreds of African businesses already transforming their operations with our intelligent software solutions. Get started today and experience the future of business automation.
+              Join industry leaders across Africa who trust our technology to drive their digital transformation. Experience the power of intelligent automation and unlock your organization's full potential.
             </p>
             
             {/* CTA Buttons */}

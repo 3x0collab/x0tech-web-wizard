@@ -12,8 +12,8 @@ const Solutions = () => {
   const solutions = [
     {
       title: 'PYE',
-      subtitle: 'AI Customer Support Assistant',
-      description: 'PYE is an AI-powered personal customer care assistant that can be integrated into websites and platforms. It interacts with visitors, answers questions, guides users, and helps businesses manage customer engagement in real time.',
+      subtitle: 'AI-Powered Customer Experience Platform',
+      description: 'PYE revolutionizes customer interactions through advanced conversational AI technology. This intelligent platform seamlessly integrates across digital touchpoints, delivering personalized support experiences that drive engagement, satisfaction, and business growth through automated yet human-like interactions.',
       image: pyeImage,
       icon: Zap,
       features: [
@@ -35,8 +35,8 @@ const Solutions = () => {
     },
     {
       title: 'Orbityx',
-      subtitle: 'Human Resource Automation Software',
-      description: 'Orbityx is an intelligent HR management system designed to handle recruitment, onboarding, leave tracking, attendance, and employee performance with full automation.',
+      subtitle: 'Enterprise HR Management Suite',
+      description: 'Orbityx transforms human capital management through intelligent automation and data-driven insights. This comprehensive platform streamlines recruitment, optimizes workforce operations, and provides strategic analytics that empower HR leaders to make informed decisions and drive organizational excellence.',
       image: orbityxImage,
       icon: Users,
       features: [
@@ -58,8 +58,8 @@ const Solutions = () => {
     },
     {
       title: 'Quicksum',
-      subtitle: 'Simplified Accounting Software',
-      description: 'Quicksum is a fast, lightweight accounting tool for small businesses. It handles invoices, financial summaries, and receipts in a simple and intuitive way.',
+      subtitle: 'Intelligent Financial Management Platform',
+      description: 'Quicksum delivers sophisticated financial management capabilities through an intuitive, cloud-based platform. Designed for growing businesses, it automates complex accounting processes, provides real-time financial insights, and ensures compliance while maintaining the simplicity that busy entrepreneurs demand.',
       image: quicksumImage,
       icon: Calculator,
       features: [
@@ -81,8 +81,8 @@ const Solutions = () => {
     },
     {
       title: 'Step-Code',
-      subtitle: 'Interactive Coding & Learning Platform',
-      description: 'Step-Code is an e-learning platform where users can learn to code, build projects, and earn certifications. Perfect for beginners and aspiring developers.',
+      subtitle: 'Advanced Developer Education Ecosystem',
+      description: 'Step-Code creates immersive learning experiences that bridge the gap between theoretical knowledge and practical expertise. This comprehensive platform combines interactive coding environments, industry-standard projects, and recognized certifications to accelerate career development and technical mastery.',
       image: stepCodeImage,
       icon: Code,
       features: [
@@ -126,9 +126,9 @@ const Solutions = () => {
   return (
     <div className="min-h-screen py-12">
       <SEOHead 
-        title="Software Solutions – PYE AI, Orbityx HR, Quicksum & Step-Code | 3x0Tech"
-        description="Explore our comprehensive software solutions: PYE AI customer support, Orbityx HR management, Quicksum accounting software, and Step-Code learning platform. Built for African businesses."
-        keywords="PYE AI assistant, Orbityx HR software, Quicksum accounting, Step-Code learning platform, business software Nigeria, AI customer support, HR automation Africa, accounting software Nigeria"
+        title="Enterprise Software Solutions – AI, HR, Financial & Learning Platforms | 3x0Tech"
+        description="Discover industry-leading software platforms: PYE AI Customer Experience, Orbityx HR Management Suite, Quicksum Financial Platform, and Step-Code Developer Education. Enterprise-grade solutions for modern businesses."
+        keywords="enterprise software platforms, AI customer experience platform, HR management suite, financial management software, developer education platform, business automation solutions Africa, enterprise technology Nigeria"
         structuredData={structuredData}
       />
       {/* Hero Section */}
@@ -139,8 +139,8 @@ const Solutions = () => {
               Our Software Solutions
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Discover our comprehensive suite of intelligent software solutions designed 
-              to transform your business operations and drive growth.
+              Explore our portfolio of enterprise-grade platforms engineered to optimize performance, 
+              accelerate digital transformation, and unlock sustainable competitive advantages for modern businesses.
             </p>
           </div>
         </div>
@@ -226,7 +226,7 @@ const Solutions = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Choose the solution that fits your needs and start your digital transformation journey today.
+            Partner with us to implement enterprise-grade solutions that drive measurable results and position your organization for sustained success in the digital economy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <NavLink to="/contact">
