@@ -42,9 +42,14 @@ const Navbar = () => {
                 />
                 <div className="absolute inset-0 rounded-full bg-primary/20 scale-0 group-hover:scale-125 transition-transform duration-300"></div>
               </div>
-              <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-primary via-primary to-primary-foreground bg-clip-text text-transparent">
-                3x0Tech Solutions
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-primary via-primary to-primary-foreground bg-clip-text text-transparent leading-tight">
+                  3x0Tech Solutions
+                </span>
+                <span className="text-xs text-muted-foreground font-medium hidden lg:block">
+                  Enterprise Technology Solutions
+                </span>
+              </div>
             </NavLink>
           </div>
 

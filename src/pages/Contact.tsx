@@ -120,9 +120,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen py-12">
       <SEOHead 
-        title="Contact 3x0Tech Solutions – Enterprise Technology Consulting & Development"
-        description="Partner with 3x0Tech Solutions for enterprise software development, digital transformation consulting, and intelligent technology solutions. Schedule your strategic consultation today."
-        keywords="enterprise technology consulting Nigeria, digital transformation services, custom software development consultation, business technology solutions Africa, enterprise software development Nigeria"
+        title="Contact 3x0Tech Solutions Ltd | Get Your Enterprise Software Development Quote | Nigeria & Africa"
+        description="Ready to transform your business with enterprise-grade software solutions? Contact Nigeria's leading technology company for AI-powered platforms, custom software development, and digital transformation services. Get your free consultation and project quote today."
+        keywords="contact 3x0tech solutions Nigeria, enterprise software development quote Africa, AI solutions consultation Nigeria, digital transformation services quote, technology consulting Nigeria, custom software development contact, business automation consultation, enterprise applications quote Nigeria, software development company Lagos contact"
         structuredData={structuredData}
       />
       {/* Hero Section */}

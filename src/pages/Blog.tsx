@@ -102,9 +102,9 @@ const Blog = () => {
   return (
     <div className="min-h-screen py-12">
       <SEOHead 
-        title="Tech Blog – Software Development Insights | 3x0Tech Solutions"
-        description="Read the latest insights on software development, AI technology, business automation, and digital transformation trends from 3x0Tech Solutions Nigeria."
-        keywords="software development blog, tech insights Nigeria, AI technology trends, business automation, digital transformation Africa, programming tutorials, tech news Nigeria"
+        title="Technology Blog | Software Development Insights & AI Innovation | 3x0Tech Solutions Nigeria"
+        description="Explore cutting-edge insights on enterprise software development, AI technology innovations, business automation strategies, and digital transformation trends from Nigeria's leading technology experts at 3x0Tech Solutions."
+        keywords="technology blog Nigeria, enterprise software development insights, AI technology trends Africa, business automation strategies, digital transformation blog, software engineering Nigeria, tech innovation Africa, AI development insights, custom software solutions blog, programming best practices Nigeria"
         structuredData={structuredData}
       />
       {/* Enhanced Hero Section */}

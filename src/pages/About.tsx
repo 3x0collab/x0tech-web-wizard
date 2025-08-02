@@ -75,9 +75,9 @@ const About = () => {
   return (
     <div className="min-h-screen py-12">
       <SEOHead 
-        title="About 3x0Tech Solutions – Leading African Technology Innovation Company"
-        description="Discover 3x0Tech Solutions, a forward-thinking technology company revolutionizing African business operations through intelligent software platforms and digital transformation services."
-        keywords="about 3x0tech solutions, African technology company, enterprise software development Nigeria, digital transformation Africa, technology innovation, business software solutions Africa"
+        title="About 3x0Tech Solutions Ltd | Leading Enterprise Software Development Company in Nigeria & Africa"
+        description="Discover Nigeria's premier technology company transforming businesses across Africa. Learn about our expert leadership team, innovative culture, and mission to deliver world-class enterprise software solutions, AI platforms, and digital transformation services."
+        keywords="about 3x0tech solutions Nigeria, enterprise software development company Africa, technology leadership Nigeria, digital transformation experts Africa, AI software development Nigeria, custom enterprise applications, African tech innovation, software consulting services, technology company Lagos, enterprise software Nigeria"
         structuredData={structuredData}
       />
       {/* Hero Section */}

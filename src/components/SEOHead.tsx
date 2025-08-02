@@ -22,9 +22,9 @@ const SEOHead = ({
   const baseUrl = 'https://3x0techsolutionsltd.com.ng';
   
   // Default SEO values
-  const defaultTitle = '3x0Tech Solutions Ltd – Web & Software Development Experts';
-  const defaultDescription = 'Professional software and website development services in Nigeria. We build AI assistants, HR software, accounting tools, and learning platforms for businesses.';
-  const defaultKeywords = 'web development Nigeria, software development, mobile apps, PYE AI, Orbityx HR, Quicksum accounting, Step-Code learning, Nigerian tech startup';
+  const defaultTitle = '3x0Tech Solutions Ltd – Leading Enterprise Software Development Company in Nigeria';
+  const defaultDescription = 'Transform your business with enterprise-grade software solutions from Nigeria\'s premier technology company. We deliver AI-powered platforms, custom software development, digital transformation, and technology consulting across Africa.';
+  const defaultKeywords = 'enterprise software development Nigeria, digital transformation Africa, custom software development Lagos, AI technology solutions Nigeria, business automation software, technology consulting Africa, software integration services, enterprise applications Nigeria, Nigerian tech company, Africa software development';
   const defaultImage = `${baseUrl}/lovable-uploads/29d73fec-f2da-4dcd-8ba9-2a01937574bd.png`;
 
   const finalTitle = title || defaultTitle;

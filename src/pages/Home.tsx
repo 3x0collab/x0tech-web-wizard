@@ -88,9 +88,9 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="3x0Tech Solutions Ltd – Enterprise Software Development & Digital Transformation"
-        description="Transform your business with cutting-edge software solutions from Nigeria's leading technology company. We deliver AI-powered platforms, enterprise applications, and digital transformation services across Africa."
-        keywords="enterprise software development Nigeria, digital transformation Africa, AI-powered business solutions, custom software development Lagos, business automation Nigeria, technology consulting Africa, software integration services"
+        title="3x0Tech Solutions Ltd – Leading Enterprise Software Development Company in Nigeria | AI Solutions & Digital Transformation"
+        description="Transform your business with enterprise-grade software solutions from Nigeria's premier technology company. We deliver AI-powered platforms, custom enterprise applications, digital transformation services, and technology consulting across Africa. Trusted by businesses for innovative solutions."
+        keywords="enterprise software development Nigeria, digital transformation Africa, AI technology solutions Nigeria, custom software development Lagos, business automation software, technology consulting Africa, software integration services, enterprise applications Nigeria, Nigerian tech company, Africa software development, PYE AI assistant, Orbityx HR software, Quicksum accounting, Step-Code learning platform"
         structuredData={structuredData}
       />
       {/* Hero Section */}
