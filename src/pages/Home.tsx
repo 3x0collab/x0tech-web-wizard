@@ -1,4 +1,4 @@
-import { ArrowRight, Zap, Users, Calculator, Code, ChevronRight } from 'lucide-react';
+import { ArrowRight, Zap, Users, Calculator, Code, Smartphone, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { NavLink } from 'react-router-dom';
@@ -8,6 +8,7 @@ import pyeImage from '@/assets/pye-ai-support.jpg';
 import orbityxImage from '@/assets/orbityx-hr.jpg';
 import quicksumImage from '@/assets/quicksum-accounting.jpg';
 import stepCodeImage from '@/assets/step-code-learning.jpg';
+import campusCafeImage from '@/assets/campuscafe-printing.jpg';
 
 const Home = () => {
   const solutions = [
@@ -42,6 +43,14 @@ const Home = () => {
       image: stepCodeImage,
       icon: Code,
       features: ['Interactive Learning', 'Project Building', 'Certifications']
+    },
+    {
+      title: 'CampusCafe',
+      subtitle: 'On-Demand Document Printing & Delivery Platform',
+      description: 'Revolutionary mobile platform connecting students with nearby printing agents for instant document printing and delivery services, operating like a modern food delivery app.',
+      image: campusCafeImage,
+      icon: Smartphone,
+      features: ['Document Upload', 'Agent Network', 'Delivery Tracking']
     }
   ];
 
