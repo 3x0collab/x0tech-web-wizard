@@ -1,4 +1,4 @@
-import { Zap, Users, Calculator, Code, ArrowRight, Check } from 'lucide-react';
+import { Zap, Users, Calculator, Code, Smartphone, ArrowRight, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { NavLink } from 'react-router-dom';
@@ -7,6 +7,7 @@ import pyeImage from '@/assets/pye-ai-support.jpg';
 import orbityxImage from '@/assets/orbityx-hr.jpg';
 import quicksumImage from '@/assets/quicksum-accounting.jpg';
 import stepCodeImage from '@/assets/step-code-learning.jpg';
+import campusCafeImage from '@/assets/campuscafe-printing.jpg';
 
 const Solutions = () => {
   const solutions = [
@@ -100,6 +101,29 @@ const Solutions = () => {
         'Build Real Projects',
         'Earn Recognized Certificates',
         'Join Developer Community'
+      ]
+    },
+    {
+      title: 'CampusCafe',
+      subtitle: 'On-Demand Document Printing & Delivery Platform',
+      description: 'CampusCafe revolutionizes document printing through an innovative mobile platform that connects students and professionals with nearby printing agents. Operating like a modern food delivery service, this comprehensive solution enables instant document printing, professional delivery services, and seamless digital-to-physical document transformation for academic and business environments.',
+      image: campusCafeImage,
+      icon: Smartphone,
+      features: [
+        'Document Upload & Processing',
+        'Nearby Agent Discovery',
+        'Real-time Order Tracking',
+        'Direct & Third-party Delivery',
+        'Agent Registration Platform',
+        'University Partnership Program',
+        'Mobile Payment Integration',
+        'Quality Assurance System'
+      ],
+      benefits: [
+        'Instant Document Access',
+        'Convenient Campus Delivery',
+        'Scalable Printing Network',
+        'Revenue Generation Opportunity'
       ]
     }
   ];
