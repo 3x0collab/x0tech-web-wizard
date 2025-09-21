@@ -36,15 +36,20 @@ All colors MUST be HSL.
     --input: 142 20% 88%;
     --ring: 142 76% 36%;
 
-    /* Enhanced design tokens for modern appeal */
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(195 100% 50%), hsl(142 60% 45%));
-    --gradient-subtle: linear-gradient(180deg, hsl(142 30% 98%), hsl(195 50% 98%), hsl(0 0% 100%));
-    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36% / 0.9), hsl(195 100% 50% / 0.8));
-    --shadow-elegant: 0 20px 40px -12px hsl(142 76% 36% / 0.25);
-    --shadow-glow: 0 0 60px hsl(142 60% 45% / 0.2);
-    --shadow-card: 0 4px 20px hsl(142 76% 36% / 0.1);
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-fast: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Advanced design tokens for modern appeal */
+  --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(120 93% 13%), hsl(195 100% 50%));
+  --gradient-subtle: linear-gradient(145deg, hsl(142 30% 98%), hsl(195 50% 98%), hsl(0 0% 100%));
+  --gradient-hero: linear-gradient(135deg, hsl(142 76% 36% / 0.95), hsl(120 93% 13% / 0.9), hsl(195 100% 50% / 0.85));
+  --gradient-mesh: radial-gradient(at 40% 20%, hsl(142 76% 36% / 0.3) 0px, transparent 50%),
+                   radial-gradient(at 80% 0%, hsl(195 100% 50% / 0.2) 0px, transparent 50%),
+                   radial-gradient(at 0% 50%, hsl(120 93% 13% / 0.1) 0px, transparent 50%);
+  --shadow-elegant: 0 25px 50px -12px hsl(142 76% 36% / 0.3);
+  --shadow-glow: 0 0 80px hsl(142 60% 45% / 0.25);
+  --shadow-card: 0 8px 32px hsl(142 76% 36% / 0.12);
+  --shadow-brutal: 8px 8px 0px hsl(142 76% 36% / 0.8);
+  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -113,22 +118,41 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 
-  /* Enhanced Interactive Elements */
+  /* Advanced Interactive Elements */
   .hover-lift {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-glow;
+    @apply transition-all duration-500 hover:scale-105 hover:shadow-glow hover:-translate-y-2;
   }
   
-  .hover-rotate {
-    @apply transition-transform duration-300 hover:rotate-6;
+  .hover-tilt {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-tilt:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg);
   }
   
   .bounce-subtle {
-    animation: bounce-subtle 2s infinite;
+    animation: bounce-subtle 3s ease-in-out infinite;
   }
 
   @keyframes bounce-subtle {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-8px) rotate(1deg); }
+    50% { transform: translateY(-4px) rotate(0deg); }
+    75% { transform: translateY(-12px) rotate(-1deg); }
+  }
+
+  /* Morphing background effect */
+  .morph-bg {
+    background: var(--gradient-mesh);
+    animation: morph 20s ease-in-out infinite;
+  }
+
+  @keyframes morph {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    50% { border-radius: 50% 40% 60% 50% / 30% 50% 60% 40%; }
+    75% { border-radius: 40% 70% 50% 60% / 70% 40% 50% 30%; }
   }
 
   /* Gradient text animation */
@@ -152,13 +176,36 @@ All colors MUST be HSL.
     100% { background-position: 0% 50%; }
   }
 
-  /* Interactive card effects */
+  /* Advanced card effects */
   .card-interactive {
-    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-glow cursor-pointer;
+    @apply transition-all duration-500 hover:shadow-glow cursor-pointer relative overflow-hidden;
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card) / 0.8));
   }
 
   .card-interactive:hover {
-    transform: translateY(-4px) scale(1.02);
+    transform: translateY(-8px) scale(1.03);
+  }
+
+  .card-interactive::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .card-interactive:hover::before {
+    left: 100%;
+  }
+  
+  /* Glassmorphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   /* Floating animation */
@@ -181,22 +228,53 @@ All colors MUST be HSL.
     to { box-shadow: 0 0 30px hsl(var(--primary) / 0.6), 0 0 40px hsl(var(--primary) / 0.3); }
   }
 
-  /* Stagger animation for cards */
+  /* Advanced stagger animation for cards */
   .stagger-animation > * {
-    animation: stagger-fade-in 0.6s ease-out forwards;
+    animation: stagger-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px) rotateX(20deg);
   }
 
   .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
-  .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
-  .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
-  .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-animation > *:nth-child(2) { animation-delay: 0.25s; }
+  .stagger-animation > *:nth-child(3) { animation-delay: 0.4s; }
+  .stagger-animation > *:nth-child(4) { animation-delay: 0.55s; }
+  .stagger-animation > *:nth-child(5) { animation-delay: 0.7s; }
 
   @keyframes stagger-fade-in {
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) rotateX(0deg);
     }
+  }
+
+  /* Magnetic hover effect */
+  .magnetic {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .magnetic:hover {
+    transform: scale(1.05) translateZ(0px);
+  }
+
+  /* Particle effect background */
+  .particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--accent) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(var(--primary) / 0.03) 0%, transparent 50%);
+    animation: particles 20s linear infinite;
+  }
+
+  @keyframes particles {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-30px) rotate(120deg); }
+    66% { transform: translateY(30px) rotate(240deg); }
   }
 }

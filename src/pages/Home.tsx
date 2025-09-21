@@ -102,140 +102,234 @@ const Home = () => {
         keywords="enterprise software development Nigeria, digital transformation Africa, AI technology solutions Nigeria, custom software development Lagos, business automation software, technology consulting Africa, software integration services, enterprise applications Nigeria, Nigerian tech company, Africa software development, PYE AI assistant, Orbityx HR software, Quicksum accounting, Step-Code learning platform"
         structuredData={structuredData}
       />
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-subtle overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        ></div>
+      {/* Revolutionary Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden morph-bg particles">
+        {/* Advanced Background Layers */}
+        <div className="absolute inset-0 bg-gradient-hero"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          ></div>
+        </div>
+        
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl bounce-subtle"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-primary/20 rounded-full blur-2xl float"></div>
+        <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-accent/30 transform rotate-45 blur-lg pulse-glow"></div>
+        
         <div className="relative z-10 container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Transforming African Business with{' '}
-              <span className="gradient-text-flow">
-                Intelligent Technology
-              </span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              We empower businesses across Africa with cutting-edge software solutions that drive efficiency, 
-              growth, and digital transformation. From AI-powered automation to enterprise-grade platforms.
-            </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="text-center lg:text-left space-y-8">
+              {/* Main Headline */}
+              <div className="space-y-4">
+                <div className="inline-flex items-center px-4 py-2 bg-accent/10 rounded-full border border-accent/20 mb-6">
+                  <span className="text-sm font-medium text-accent">🚀 Revolutionary Tech Solutions</span>
+                </div>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-tight">
+                  Transforming
+                  <br />
+                  <span className="gradient-text-flow">African Business</span>
+                  <br />
+                  with AI Excellence
+                </h1>
+              </div>
+
+              {/* Enhanced Description */}
+              <p className="text-2xl text-muted-foreground leading-relaxed max-w-3xl">
+                We craft <strong className="text-foreground">next-generation software ecosystems</strong> that propel 
+                African enterprises into the future. Experience the power of intelligent automation, 
+                seamless integration, and unparalleled scalability.
+              </p>
+
+              {/* Advanced CTA Section */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
                 <NavLink to="/contact">
-                  <Button variant="hero" size="xl" className="group pulse-glow">
-                    Get Started
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <Button variant="hero" size="xl" className="group magnetic hover-tilt shadow-brutal">
+                    <span className="flex items-center">
+                      <Zap className="mr-3 h-6 w-6" />
+                      Launch Your Transformation
+                      <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+                    </span>
                   </Button>
                 </NavLink>
                 <NavLink to="/solutions">
-                  <Button variant="outline-hero" size="xl" className="hover-lift">
-                    Our Solutions
+                  <Button variant="outline-hero" size="xl" className="glass hover-lift">
+                    <span className="flex items-center">
+                      <Code className="mr-2 h-5 w-5" />
+                      Explore Solutions
+                    </span>
                   </Button>
                 </NavLink>
               </div>
+
+              {/* Trust Indicators */}
+              <div className="flex items-center gap-8 pt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">50+</div>
+                  <div className="text-sm text-muted-foreground">Projects Delivered</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">100%</div>
+                  <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">24/7</div>
+                  <div className="text-sm text-muted-foreground">Support</div>
+                </div>
+              </div>
             </div>
-            <div className="relative hidden lg:block float">
-              <div className="w-full h-96 rounded-2xl shadow-elegant overflow-hidden hover-lift">
-                <img 
-                  src={heroImage} 
-                  alt="3x0Tech Solutions team developing innovative software solutions for African businesses"
-                  className="w-full h-full object-cover"
-                />
+            <div className="relative hidden lg:block">
+              {/* 3D Hero Visual */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-1000"></div>
+                <div className="relative w-full h-[500px] rounded-3xl shadow-elegant overflow-hidden hover-tilt bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm border border-border/50">
+                  <img 
+                    src={heroImage} 
+                    alt="3x0Tech Solutions: Advanced software development and AI solutions transforming African businesses"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/20"></div>
+                  
+                  {/* Floating Tech Icons */}
+                  <div className="absolute top-6 right-6 p-3 bg-accent/90 rounded-full shadow-lg float">
+                    <Zap className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="absolute bottom-6 left-6 p-3 bg-primary/90 rounded-full shadow-lg bounce-subtle">
+                    <Code className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="absolute top-1/2 left-6 p-2 bg-accent/80 rounded-lg shadow-md pulse-glow">
+                    <Users className="h-5 w-5 text-white" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What We Do
+      {/* Revolutionary Services Section */}
+      <section className="py-32 bg-background relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-mesh"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 bg-accent/10 rounded-full border border-accent/20 mb-8">
+              <span className="text-sm font-semibold text-accent">💡 Our Expertise</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 leading-tight">
+              What We <span className="gradient-text-flow">Craft</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We partner with forward-thinking organizations to deliver transformative technology solutions 
-              that accelerate growth and unlock new possibilities
+            <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              We architect digital ecosystems that transform businesses, accelerate growth, 
+              and unlock unprecedented possibilities across the African continent
             </p>
           </div>
 
-          {/* Service Categories */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-            {/* Website Development */}
-            <Card className="group hover:shadow-glow transition-all duration-300 hover:scale-[1.02] border-border">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Code className="h-8 w-8 text-primary" />
+          {/* Advanced Service Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+            {/* Revolutionary Web Development */}
+            <Card className="group card-interactive border-0 bg-gradient-to-br from-background to-muted/50 shadow-brutal hover:shadow-glow">
+              <CardHeader className="pb-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-4 bg-gradient-primary rounded-2xl shadow-lg group-hover:rotate-12 transition-transform duration-500">
+                    <Code className="h-10 w-10 text-white" />
                   </div>
-                  <CardTitle className="text-2xl">Website Development</CardTitle>
+                  <div>
+                    <CardTitle className="text-3xl font-black">Web Development</CardTitle>
+                    <p className="text-accent font-semibold">Next-Gen Digital Experiences</p>
+                  </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-6 text-lg">
-                  Sophisticated web applications engineered for performance, scalability, and user engagement. 
-                  We craft digital experiences that convert visitors into customers and drive measurable business results.
+              <CardContent className="space-y-6">
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  We architect <strong className="text-foreground">sophisticated web ecosystems</strong> that merge 
+                  cutting-edge technology with intuitive design. Our platforms don't just look stunning—they 
+                  drive conversions, enhance engagement, and scale effortlessly with your business growth.
                 </p>
-                <div className="space-y-3">
-                  <div className="flex items-center text-sm">
-                    <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                    <span>Responsive & Mobile-First Design</span>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 bg-accent/5 rounded-xl border border-accent/20">
+                    <div className="flex items-center mb-2">
+                      <ChevronRight className="h-5 w-5 text-accent mr-2" />
+                      <span className="font-semibold">Responsive Design</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Mobile-first architecture</p>
                   </div>
-                  <div className="flex items-center text-sm">
-                    <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                    <span>E-commerce Solutions</span>
+                  <div className="p-4 bg-accent/5 rounded-xl border border-accent/20">
+                    <div className="flex items-center mb-2">
+                      <ChevronRight className="h-5 w-5 text-accent mr-2" />
+                      <span className="font-semibold">E-commerce</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Advanced shopping platforms</p>
                   </div>
-                  <div className="flex items-center text-sm">
-                    <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                    <span>SEO Optimization</span>
+                  <div className="p-4 bg-accent/5 rounded-xl border border-accent/20">
+                    <div className="flex items-center mb-2">
+                      <ChevronRight className="h-5 w-5 text-accent mr-2" />
+                      <span className="font-semibold">SEO Mastery</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Search engine dominance</p>
                   </div>
-                  <div className="flex items-center text-sm">
-                    <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                    <span>Content Management Systems</span>
+                  <div className="p-4 bg-accent/5 rounded-xl border border-accent/20">
+                    <div className="flex items-center mb-2">
+                      <ChevronRight className="h-5 w-5 text-accent mr-2" />
+                      <span className="font-semibold">CMS Integration</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Content management excellence</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Software Development */}
-            <Card className="group hover:shadow-glow transition-all duration-300 hover:scale-[1.02] border-border">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Zap className="h-8 w-8 text-primary" />
+            {/* Advanced Software Development */}
+            <Card className="group card-interactive border-0 bg-gradient-to-br from-background to-muted/50 shadow-brutal hover:shadow-glow">
+              <CardHeader className="pb-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-4 bg-gradient-primary rounded-2xl shadow-lg group-hover:rotate-12 transition-transform duration-500">
+                    <Zap className="h-10 w-10 text-white" />
                   </div>
-                  <CardTitle className="text-2xl">Software Development</CardTitle>
+                  <div>
+                    <CardTitle className="text-3xl font-black">Software Development</CardTitle>
+                    <p className="text-accent font-semibold">Enterprise-Grade Solutions</p>
+                  </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-6 text-lg">
-                  Enterprise-grade software platforms built with modern architecture and best practices. 
-                  We deliver robust, secure applications that scale with your business and integrate seamlessly with existing systems.
+              <CardContent className="space-y-6">
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  We engineer <strong className="text-foreground">enterprise-grade software platforms</strong> using 
+                  modern architecture patterns and industry best practices. Our solutions seamlessly integrate 
+                  with existing systems while providing unmatched scalability and security.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-foreground">Mobile Apps</h4>
-                    <div className="flex items-center text-sm">
-                      <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                      <span>Android Development</span>
-                    </div>
-                    <div className="flex items-center text-sm">
-                      <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                      <span>iOS Development</span>
+                
+                <div className="space-y-6">
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <h4 className="font-black text-xl text-foreground mb-4">Mobile Excellence</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="flex items-center">
+                        <ChevronRight className="h-5 w-5 text-primary mr-3" />
+                        <span className="font-medium">Native Android Apps</span>
+                      </div>
+                      <div className="flex items-center">
+                        <ChevronRight className="h-5 w-5 text-primary mr-3" />
+                        <span className="font-medium">iOS Applications</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-foreground">Desktop Software</h4>
-                    <div className="flex items-center text-sm">
-                      <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                      <span>Business Applications</span>
-                    </div>
-                    <div className="flex items-center text-sm">
-                      <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                      <span>Enterprise Solutions</span>
+                  
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <h4 className="font-black text-xl text-foreground mb-4">Desktop Mastery</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="flex items-center">
+                        <ChevronRight className="h-5 w-5 text-primary mr-3" />
+                        <span className="font-medium">Business Applications</span>
+                      </div>
+                      <div className="flex items-center">
+                        <ChevronRight className="h-5 w-5 text-primary mr-3" />
+                        <span className="font-medium">Enterprise Solutions</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -245,102 +339,140 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Our Core Solutions Section */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Core Solutions
+      {/* Revolutionary Solutions Showcase */}
+      <section className="py-32 bg-gradient-to-br from-muted/30 via-background to-muted/50 relative overflow-hidden">
+        {/* Advanced Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl float"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-primary opacity-5 rounded-full blur-2xl pulse-glow"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-primary/10 rounded-full border border-primary/20 mb-8 shadow-lg">
+              <span className="text-sm font-bold text-primary">⚡ Revolutionary Solutions</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-foreground mb-8 leading-tight">
+              Our <span className="gradient-text-flow">Game-Changing</span>
+              <br />Platforms
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore our portfolio of industry-leading platforms engineered to streamline operations, 
-              enhance productivity, and drive sustainable business growth
+            <p className="text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed">
+              Discover our portfolio of <strong className="text-foreground">industry-disrupting platforms</strong> engineered 
+              to revolutionize operations, amplify productivity, and catalyze exponential business growth across Africa
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-animation">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 stagger-animation">
             {solutions.map((solution, index) => (
-              <Card key={index} className="group card-interactive border-border">
-                <div className="aspect-video overflow-hidden rounded-t-lg">
+              <Card key={index} className="group card-interactive border-0 bg-gradient-to-br from-background via-background to-muted/30 shadow-brutal hover:shadow-glow overflow-hidden">
+                {/* Enhanced Image Container */}
+                <div className="relative aspect-video overflow-hidden">
                   <img 
                     src={solution.image} 
-                    alt={`${solution.title} - ${solution.subtitle} software solution by 3x0Tech`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    alt={`${solution.title} - ${solution.subtitle} revolutionary software solution by 3x0Tech`}
+                    className="w-full h-full object-cover group-hover:scale-125 transition-all duration-1000"
                   />
-                </div>
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <solution.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl">{solution.title}</CardTitle>
-                      <CardDescription className="text-sm text-muted-foreground">
-                        {solution.subtitle}
-                      </CardDescription>
-                    </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  
+                  {/* Floating Icon */}
+                  <div className="absolute top-4 right-4 p-3 bg-gradient-primary rounded-full shadow-lg group-hover:rotate-12 transition-transform duration-500">
+                    <solution.icon className="h-6 w-6 text-white" />
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  
+                  {/* Tech Badge */}
+                  <div className="absolute bottom-4 left-4 px-3 py-1 bg-accent/90 rounded-full backdrop-blur-sm">
+                    <span className="text-xs font-bold text-white">NEXT-GEN TECH</span>
+                  </div>
+                </div>
+
+                {/* Enhanced Content */}
+                <div className="p-8 space-y-6">
+                  <div className="space-y-2">
+                    <CardTitle className="text-2xl font-black text-foreground group-hover:text-primary transition-colors">
+                      {solution.title}
+                    </CardTitle>
+                    <CardDescription className="text-accent font-semibold text-base">
+                      {solution.subtitle}
+                    </CardDescription>
+                  </div>
+
+                  <p className="text-muted-foreground text-lg leading-relaxed">
                     {solution.description}
                   </p>
-                  <div className="space-y-2 mb-4">
+
+                  {/* Enhanced Features Grid */}
+                  <div className="grid grid-cols-1 gap-3">
                     {solution.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm">
-                        <ChevronRight className="h-4 w-4 text-primary mr-2" />
-                        <span>{feature}</span>
+                      <div key={featureIndex} className="flex items-center p-3 bg-accent/5 rounded-lg border border-accent/20">
+                        <div className="p-1 bg-accent/20 rounded-full mr-3">
+                          <ChevronRight className="h-4 w-4 text-accent" />
+                        </div>
+                        <span className="font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
+
+                  {/* Advanced CTA */}
                   <NavLink to="/solutions">
-                    <Button variant="outline" className="w-full group">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <Button variant="outline" className="w-full group bg-gradient-to-r from-background to-muted hover:from-primary hover:to-accent hover:text-white transition-all duration-500 shadow-lg hover:shadow-primary/25 border-2 border-primary/20 hover:border-transparent">
+                      <span className="flex items-center justify-center">
+                        <span className="font-bold">Explore Platform</span>
+                        <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                      </span>
                     </Button>
                   </NavLink>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Premium CTA Section */}
-      <section className="relative py-24 bg-primary overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-accent rounded-full blur-xl bounce-subtle"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent rounded-full blur-xl float"></div>
-          <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-accent rounded-full blur-lg pulse-glow"></div>
-          <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-accent rounded-full blur-lg float"></div>
+      {/* Revolutionary CTA Section */}
+      <section className="relative py-32 bg-gradient-hero overflow-hidden">
+        {/* Advanced Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-48 h-48 bg-accent/30 rounded-full blur-3xl bounce-subtle"></div>
+          <div className="absolute bottom-10 right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl float"></div>
+          <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-accent/40 rounded-full blur-2xl pulse-glow"></div>
+          <div className="absolute top-1/3 right-1/4 w-40 h-40 bg-primary/30 rounded-full blur-2xl morph-bg"></div>
+          
+          {/* Mesh Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Icon */}
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/20 rounded-full mb-6">
-              <Zap className="w-8 h-8 text-accent" />
+          <div className="max-w-6xl mx-auto text-center space-y-12">
+            {/* Enhanced Icon */}
+            <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-primary rounded-2xl shadow-brutal mb-8 hover-tilt">
+              <Zap className="w-12 h-12 text-white" />
             </div>
             
-            {/* Heading */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Ready to take your business to the{' '}
-              <span className="text-accent">next level?</span>
-            </h2>
+            {/* Revolutionary Heading */}
+            <div className="space-y-6">
+              <h2 className="text-5xl md:text-6xl lg:text-8xl font-black text-primary-foreground leading-tight">
+                Ready to{' '}
+                <span className="bg-gradient-to-r from-accent via-white to-accent bg-clip-text text-transparent">
+                  Revolutionize
+                </span>
+                <br />
+                Your Business?
+              </h2>
+              
+              <p className="text-2xl md:text-3xl text-primary-foreground/90 max-w-4xl mx-auto leading-relaxed font-light">
+                Join <strong className="text-accent">industry leaders</strong> across Africa who trust our 
+                cutting-edge technology to drive their digital transformation and unlock exponential growth potential.
+              </p>
+            </div>
             
-            {/* Subheading */}
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Join industry leaders across Africa who trust our technology to drive their digital transformation. Experience the power of intelligent automation and unlock your organization's full potential.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8">
               <NavLink to="/contact">
-                <Button variant="secondary" size="xl" className="group shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <Users className="mr-3 h-5 w-5" />
-                  Request a Demo
-                  <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <Button variant="secondary" size="xl" className="group magnetic shadow-brutal hover:shadow-glow transition-all duration-500 px-12 py-6 text-lg font-bold">
+                  <Users className="mr-4 h-6 w-6" />
+                  <span>Request Elite Demo</span>
+                  <ArrowRight className="ml-4 h-6 w-6 group-hover:translate-x-2 transition-transform" />
                 </Button>
               </NavLink>
               
@@ -348,12 +480,32 @@ const Home = () => {
                 <Button 
                   variant="outline" 
                   size="xl" 
-                  className="bg-transparent text-primary-foreground border-2 border-primary-foreground/30 hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="glass text-primary-foreground border-2 border-primary-foreground/40 hover:bg-primary-foreground hover:text-primary magnetic transition-all duration-500 px-12 py-6 text-lg font-bold hover-tilt"
                 >
-                  <Code className="mr-3 h-5 w-5" />
-                  Explore Solutions
+                  <Code className="mr-4 h-6 w-6" />
+                  <span>Explore Arsenal</span>
                 </Button>
               </NavLink>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-12 pt-16 opacity-80">
+              <div className="text-center space-y-2">
+                <div className="text-4xl font-black text-accent">50+</div>
+                <div className="text-primary-foreground/70">Elite Clients</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-4xl font-black text-accent">100%</div>
+                <div className="text-primary-foreground/70">Success Rate</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-4xl font-black text-accent">24/7</div>
+                <div className="text-primary-foreground/70">Expert Support</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-4xl font-black text-accent">5⭐</div>
+                <div className="text-primary-foreground/70">Client Rating</div>
+              </div>
             </div>
             
             {/* Trust Indicators */}
