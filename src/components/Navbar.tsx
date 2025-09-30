@@ -61,7 +61,7 @@ const Navbar = () => {
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `relative px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    `relative px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${
                       isActive
                         ? 'text-primary bg-accent/80 shadow-sm' 
                         : 'text-foreground/80 hover:text-primary hover:bg-accent/50'
@@ -82,7 +82,7 @@ const Navbar = () => {
               <Button 
                 variant="default" 
                 size="sm" 
-                className="relative overflow-hidden group transition-all duration-300 shadow-lg hover:shadow-primary/25"
+                className="relative overflow-hidden group hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25"
               >
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -96,7 +96,7 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="relative group transition-all duration-300"
+              className="relative group hover:scale-110 transition-all duration-300"
             >
               <div className="absolute inset-0 rounded-lg bg-accent/50 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
               {isOpen ? (
@@ -123,8 +123,8 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     `block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${
                       isActive
-                        ? 'text-primary bg-accent/80 shadow-sm'
-                        : 'text-foreground/80 hover:text-primary hover:bg-accent/50'
+                        ? 'text-primary bg-accent/80 shadow-sm scale-[1.02]'
+                        : 'text-foreground/80 hover:text-primary hover:bg-accent/50 hover:scale-[1.02]'
                     }`
                   }
                   onClick={() => setIsOpen(false)}
