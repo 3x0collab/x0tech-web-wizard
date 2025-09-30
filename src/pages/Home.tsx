@@ -103,7 +103,7 @@ const Home = () => {
         structuredData={structuredData}
       />
       {/* Revolutionary Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden morph-bg particles">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden morph-bg">
         {/* Advanced Background Layers */}
         <div className="absolute inset-0 bg-gradient-hero"></div>
         <div className="absolute inset-0 opacity-20">
