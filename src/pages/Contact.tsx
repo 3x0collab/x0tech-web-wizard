@@ -8,86 +8,32 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import SEOHead from '@/components/SEOHead';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import DOMPurify from 'dompurify';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-
-// Enhanced form validation schema with security constraints
-const contactFormSchema = z.object({
-  name: z.string()
-    .min(2, 'Name must be at least 2 characters')
-    .max(100, 'Name must be less than 100 characters')
-    .regex(/^[a-zA-Z\s.-]+$/, 'Name can only contain letters, spaces, dots, and hyphens'),
-  email: z.string()
-    .email('Please enter a valid email address')
-    .max(254, 'Email address is too long'),
-  phone: z.string()
-    .regex(/^[\d\s\-+()]*$/, 'Phone number contains invalid characters')
-    .max(20, 'Phone number is too long')
-    .optional()
-    .or(z.literal('')),
-  message: z.string()
-    .min(10, 'Message must be at least 10 characters')
-    .max(5000, 'Message must be less than 5000 characters')
-});
-
-type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
-  const [lastSubmission, setLastSubmission] = useState<number>(0);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    }
-  });
-
-  // Rate limiting: prevent submissions within 30 seconds
-  const checkRateLimit = (): boolean => {
-    const now = Date.now();
-    const timeSinceLastSubmission = now - lastSubmission;
-    const rateLimitMs = 30 * 1000; // 30 seconds
-    
-    if (timeSinceLastSubmission < rateLimitMs) {
-      const remainingTime = Math.ceil((rateLimitMs - timeSinceLastSubmission) / 1000);
-      toast({
-        title: "Please Wait",
-        description: `Please wait ${remainingTime} seconds before submitting another message.`,
-        variant: "destructive"
-      });
-      return false;
-    }
-    return true;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
-  // Sanitize input data
-  const sanitizeData = (data: ContactFormData): ContactFormData => {
-    return {
-      name: DOMPurify.sanitize(data.name.trim()),
-      email: DOMPurify.sanitize(data.email.trim().toLowerCase()),
-      phone: data.phone ? DOMPurify.sanitize(data.phone.trim()) : '',
-      message: DOMPurify.sanitize(data.message.trim())
-    };
-  };
-
-  const onSubmit = async (data: ContactFormData) => {
-    if (!checkRateLimit()) return;
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
     try {
-      // Sanitize all input data
-      const sanitizedData = sanitizeData(data);
-      
-      setLastSubmission(Date.now());
-
-      const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: sanitizedData
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
       });
 
       if (error) {
@@ -100,7 +46,12 @@ const Contact = () => {
       });
       
       // Reset form
-      form.reset();
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
     } catch (error: any) {
       console.error('Error sending message:', error);
       toast({
@@ -108,6 +59,8 @@ const Contact = () => {
         description: "Please try again or contact us directly at info@3x0techsolutionsltd.com.ng",
         variant: "destructive"
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -201,96 +154,74 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <FormField
-                          control={form.control}
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="name">Full Name *</Label>
+                        <Input
+                          id="name"
                           name="name"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Full Name *</FormLabel>
-                              <FormControl>
-                                <Input
-                                  placeholder="Your full name"
-                                  {...field}
-                                  maxLength={100}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="phone"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Phone Number</FormLabel>
-                              <FormControl>
-                                <Input
-                                  type="tel"
-                                  placeholder="Your phone number"
-                                  {...field}
-                                  maxLength={20}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
+                          type="text"
+                          placeholder="Your full name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                          className="mt-1"
                         />
                       </div>
-                      
-                      <FormField
-                        control={form.control}
+                      <div>
+                        <Label htmlFor="phone">Phone Number</Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          placeholder="Your phone number"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="mt-1"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input
+                        id="email"
                         name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email Address *</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="email"
-                                placeholder="your.email@example.com"
-                                {...field}
-                                maxLength={254}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
+                        type="email"
+                        placeholder="your.email@example.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="mt-1"
                       />
-                      
-                      <FormField
-                        control={form.control}
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="message">Message *</Label>
+                      <Textarea
+                        id="message"
                         name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Message *</FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="Tell us about your project or how we can help you..."
-                                rows={6}
-                                {...field}
-                                maxLength={5000}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
+                        placeholder="Tell us about your project or how we can help you..."
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
+                        rows={6}
+                        className="mt-1"
                       />
-                      
-                      <Button 
-                        type="submit" 
-                        variant="default" 
-                        size="lg" 
-                        className="w-full group" 
-                        disabled={form.formState.isSubmitting}
-                      >
-                        <Send className="w-4 h-4 mr-2" />
-                        {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
-                      </Button>
-                    </form>
-                  </Form>
+                    </div>
+                    
+                    <Button 
+                      type="submit" 
+                      variant="default" 
+                      size="lg" 
+                      className="w-full group" 
+                      disabled={isSubmitting}
+                    >
+                      <Send className="w-4 h-4 mr-2" />
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
             </div>
