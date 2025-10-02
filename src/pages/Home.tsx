@@ -1,4 +1,4 @@
-import { ArrowRight, Zap, Users, Calculator, Code, Smartphone, ChevronRight } from 'lucide-react';
+import { ArrowRight, Zap, Users, Calculator, Code, Smartphone, ChevronRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { NavLink } from 'react-router-dom';
@@ -103,10 +103,10 @@ const Home = () => {
         structuredData={structuredData}
       />
       {/* Revolutionary Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center morph-bg particles">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/30">
         {/* Advanced Background Layers */}
-        <div className="absolute inset-0 bg-gradient-hero"></div>
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-mesh opacity-60"></div>
+        <div className="absolute inset-0 opacity-10">
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -114,92 +114,98 @@ const Home = () => {
         </div>
         
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl bounce-subtle"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-primary/20 rounded-full blur-2xl float"></div>
-        <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-accent/30 transform rotate-45 blur-lg pulse-glow"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-accent/10 rounded-full blur-3xl bounce-subtle"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl float"></div>
+        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-accent/15 rounded-full blur-2xl pulse-glow"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-40 h-40 bg-primary/10 rounded-full blur-3xl float" style={{ animationDelay: '2s' }}></div>
         
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="text-center lg:text-left space-y-8">
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="text-center lg:text-left space-y-10">
               {/* Main Headline */}
-              <div className="space-y-4">
-                <div className="inline-flex items-center px-4 py-2 bg-accent/10 rounded-full border border-accent/20 mb-6">
-                  <span className="text-sm font-medium text-accent">🚀 Revolutionary Tech Solutions</span>
+              <div className="space-y-6 animate-fade-in">
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-accent/20 via-primary/20 to-accent/20 rounded-full border border-accent/30 backdrop-blur-sm shadow-lg mb-8 hover-lift">
+                  <Sparkles className="h-4 w-4 text-accent mr-2" />
+                  <span className="text-sm font-bold text-accent">Revolutionary Tech Solutions</span>
+                  <div className="ml-2 h-2 w-2 rounded-full bg-accent animate-pulse"></div>
                 </div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-tight">
-                  Transforming
+                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1]">
+                  <span className="text-foreground">Transforming</span>
                   <br />
                   <span className="gradient-text-flow">African Business</span>
                   <br />
-                  with AI Excellence
+                  <span className="text-foreground">with AI</span>{' '}
+                  <span className="inline-block gradient-text-flow hover-tilt">Excellence</span>
                 </h1>
               </div>
 
               {/* Enhanced Description */}
-              <p className="text-2xl text-muted-foreground leading-relaxed max-w-3xl">
-                We craft <strong className="text-foreground">next-generation software ecosystems</strong> that propel 
-                African enterprises into the future. Experience the power of intelligent automation, 
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                We craft <strong className="text-foreground font-bold">next-generation software ecosystems</strong> that propel 
+                African enterprises into the future. Experience the power of <span className="text-primary font-semibold">intelligent automation</span>, 
                 seamless integration, and unparalleled scalability.
               </p>
 
               {/* Advanced CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <NavLink to="/contact">
-                  <Button variant="hero" size="xl" className="group magnetic hover-tilt shadow-brutal">
-                    <span className="flex items-center">
-                      <Zap className="mr-3 h-6 w-6" />
-                      Launch Your Transformation
-                      <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
-                    </span>
+                  <Button variant="hero" size="xl" className="group shadow-brutal hover:shadow-glow">
+                    <Zap className="mr-3 h-6 w-6 group-hover:rotate-180 transition-transform duration-500" />
+                    Launch Your Transformation
+                    <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
                   </Button>
                 </NavLink>
                 <NavLink to="/solutions">
-                  <Button variant="outline-hero" size="xl" className="glass hover-lift">
-                    <span className="flex items-center">
-                      <Code className="mr-2 h-5 w-5" />
-                      Explore Solutions
-                    </span>
+                  <Button variant="outline-hero" size="xl" className="backdrop-blur-sm hover-lift">
+                    <Code className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                    Explore Solutions
+                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </NavLink>
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex items-center gap-8 pt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Delivered</div>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-8 lg:gap-12 pt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                <div className="group text-center hover-lift cursor-default">
+                  <div className="text-4xl lg:text-5xl font-black gradient-text-flow mb-2">50+</div>
+                  <div className="text-sm font-semibold text-muted-foreground">Projects Delivered</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                <div className="h-12 w-px bg-border"></div>
+                <div className="group text-center hover-lift cursor-default">
+                  <div className="text-4xl lg:text-5xl font-black gradient-text-flow mb-2">100%</div>
+                  <div className="text-sm font-semibold text-muted-foreground">Client Satisfaction</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">24/7</div>
-                  <div className="text-sm text-muted-foreground">Support</div>
+                <div className="h-12 w-px bg-border"></div>
+                <div className="group text-center hover-lift cursor-default">
+                  <div className="text-4xl lg:text-5xl font-black gradient-text-flow mb-2">24/7</div>
+                  <div className="text-sm font-semibold text-muted-foreground">Support Available</div>
                 </div>
               </div>
             </div>
-            <div className="relative hidden lg:block">
+            <div className="relative hidden lg:block animate-fade-in" style={{ animationDelay: '0.3s' }}>
               {/* 3D Hero Visual */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-1000"></div>
-                <div className="relative w-full h-[500px] rounded-3xl shadow-elegant overflow-hidden hover-tilt bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm border border-border/50">
+                <div className="absolute inset-0 bg-gradient-primary rounded-[2rem] blur-3xl opacity-20 group-hover:opacity-40 transition-all duration-1000"></div>
+                <div className="relative w-full h-[600px] rounded-[2rem] shadow-brutal overflow-hidden hover-lift bg-gradient-to-br from-card via-card/95 to-card/90 backdrop-blur-xl border-2 border-border/50">
                   <img 
                     src={heroImage} 
                     alt="3x0Tech Solutions: Advanced software development and AI solutions transforming African businesses"
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-all duration-700"
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-accent/20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-accent/20"></div>
                   
                   {/* Floating Tech Icons */}
-                  <div className="absolute top-6 right-6 p-3 bg-accent/90 rounded-full shadow-lg float">
-                    <Zap className="h-6 w-6 text-white" />
+                  <div className="absolute top-8 right-8 p-4 bg-gradient-to-br from-accent to-accent/80 rounded-2xl shadow-glow float backdrop-blur-sm border border-white/20">
+                    <Zap className="h-7 w-7 text-white" />
                   </div>
-                  <div className="absolute bottom-6 left-6 p-3 bg-primary/90 rounded-full shadow-lg bounce-subtle">
-                    <Code className="h-6 w-6 text-white" />
+                  <div className="absolute bottom-8 left-8 p-4 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-glow bounce-subtle backdrop-blur-sm border border-white/20">
+                    <Code className="h-7 w-7 text-white" />
                   </div>
-                  <div className="absolute top-1/2 left-6 p-2 bg-accent/80 rounded-lg shadow-md pulse-glow">
-                    <Users className="h-5 w-5 text-white" />
+                  <div className="absolute top-1/2 left-8 p-3 bg-gradient-to-br from-accent/90 to-accent/70 rounded-xl shadow-lg pulse-glow backdrop-blur-sm border border-white/20">
+                    <Users className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="absolute top-1/3 right-12 p-3 bg-gradient-to-br from-primary/90 to-primary/70 rounded-xl shadow-lg float backdrop-blur-sm border border-white/20" style={{ animationDelay: '1s' }}>
+                    <Smartphone className="h-6 w-6 text-white" />
                   </div>
                 </div>
               </div>
