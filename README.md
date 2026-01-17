@@ -1,5 +1,7 @@
 #  - Official Website
 
+![Project Screenshot](Screenshot%202026-01-17%20071203.png)
+
 ![ ![License](https://img.shields.io/badge/License-MIT-green) ![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6)
 
 The official repository for the **3x0tech Solutions** corporate website. This platform showcases our software solutions, services, and portfolio. Built as a full-stack application using **React**, **TypeScript**, and **Node.js**.
