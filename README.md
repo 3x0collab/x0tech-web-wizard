@@ -10,7 +10,7 @@ There are several ways of editing my application.
 
 **Use **
 
-Simply visit the [ Project](https://.dev/projects/2d19e0ec-082a-4757-8c49-d1fb5a42e10a) and start prompting.
+Simply visit the [ Project](https://.dev/projects/2d19e0ec-082a-4757-8c49-d1fb5a42e10a) and start .
 
 Changes made via  will be committed automatically to this repo.
 
