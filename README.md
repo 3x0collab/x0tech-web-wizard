@@ -1,73 +1,77 @@
-# Welcome to my  project
+#  - Official Website
 
-## Project info
+![ ![License](https://img.shields.io/badge/License-MIT-green) ![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6)
 
-**URL**: https://.dev/projects/2d19e0ec-082a-4757-8c49-d1fb5a42e10a
+The official repository for the **3x0tech Solutions** corporate website. This platform showcases our software solutions, services, and portfolio. Built as a full-stack application using **React**, **TypeScript**, and **Node.js**.
 
-## How can I edit this code?
+## 🚀 About the Project
 
-There are several ways of editing my application.
+3x0tech Solutions is a technology provider specializing in [Insert Core Focus, e.g., Fintech, AI, & Blockchain]. This website serves as the central hub for:
+* Showcasing our services and case studies.
+* Client onboarding and inquiry forms.
+* Admin dashboard for managing content and leads.
 
-**Use **
+## 🛠️ Tech Stack
 
-Simply visit the [ Project](https://.dev/projects/2d19e0ec-082a-4757-8c49-d1fb5a42e10a) and start .
+This project is built with a strictly typed architecture for scalability and maintainability.
 
-Changes made via  will be committed automatically to this repo.
+### **Frontend (Client)**
+* **Framework:** React.js
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS / SCSS
+* **State Management:** Redux Toolkit / Context API
+* **Routing:** React Router
 
-**Use my preferred IDE**
+### **Backend (Server)**
+* **Runtime:** Node.js
+* **Framework:** Express.js
+* **Language:** TypeScript
+* **Database:** MongoDB (Mongoose) / PostgreSQL
+* **Authentication:** JWT / OAuth
 
-If you want to work locally using my own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in .
+## 📂 Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+3x0tech-website/
+├── client/           # React Frontend Application
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── types/
+│   │   └── utils/
+│   └── tsconfig.json
+├── server/           # Node.js Backend API
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── middleware/
+│   └── tsconfig.json
+└── README.md
 
-Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <my_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <my_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
 ```
+🏁 Getting Started
+Follow these steps to set up the project locally.
 
-**Edit a file directly in GitHub**
+Prerequisites
+Node.js (v18 or higher)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make my changes and commit the changes.
+npm or yarn
 
-**Use GitHub Codespaces**
+MongoDB (or your preferred database)
 
-- Navigate to the main page of my repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push my changes once you're done.
+Installation
+Clone the repository
 
-## What technologies are used for this project?
+git clone [https://github.com/your-username/3x0tech-website.git](https://github.com/your-username/3x0tech-website.git)
+cd 3x0tech-website
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+cd server
+npm install
 
-## How can I deploy this project?
-
-Simply open [](https://.dev/projects/2d19e0ec-082a-4757-8c49-d1fb5a42e10a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my  project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs..dev/tips-tricks/custom-domain#step-by-step-guide)
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/3x0tech
+JWT_SECRET=your_secret_key
